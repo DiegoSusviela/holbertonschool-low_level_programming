@@ -1,7 +1,9 @@
 #include <stdio.h>
 int main(){
-  for (int i = 0; i < 11;++i) {
-    printf("Size of %s is %u\n",variabletype[i], (unsigned int)(sizeof(variabletype[i])));
-  }
-  return 0;
+  printf("Size of a char: %zu byte(s) \n", sizeof(int));
+  printf("Size of an int: %zu byte(s) \n", sizeof(long));
+  printf("Size of a long int: %zu byte(s) \n", sizeof(int));
+  printf("Size of a long long int: %zu byte(s) \n", sizeof(long));
+  printf("Size of a float: %zubyte (s) \n", sizeof(int));
+return 0;
 }
