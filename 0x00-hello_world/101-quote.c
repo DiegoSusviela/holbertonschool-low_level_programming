@@ -1,5 +1,13 @@
 #include <stdio.h>
-int main (){
-  printf("and that piece of art is useful\" - Dora Korpar, 2015-10-19 \n" );
-  return 1;
+/**
+ * main - Entry point
+ *
+ * Description: Show a message blablabla
+ * Return: Always 0 (Success)
+ */
+
+int main(void)
+{
+printf("and that piece of art is useful\" - Dora Korpar, 2015-10-19 \n");
+return (1);
 }
