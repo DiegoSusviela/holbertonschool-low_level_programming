@@ -1,7 +1,10 @@
 #include <stdio.h>
 
-/*
- *wopa
+/**
+ * main - Entry point
+ *
+ * Description: Show a message blablabla
+ * Return: Always 0 (Success)
  */
 
 int main(void)
