@@ -12,16 +12,10 @@
 
 int main(void)
 {
-	int w, x;
+	int x;
 
-	for (x = 'A'; x <= 'Z'; x++)
-	{
-		if (x != 'Q' && x != 'E')
-		{
-			w = tolower(x);
-			putchar(w);
-		}
-	}
+	for (x = 0; x < 10; x++)
+		putchar(x);
 	putchar('\n');
 	return (0);
 }

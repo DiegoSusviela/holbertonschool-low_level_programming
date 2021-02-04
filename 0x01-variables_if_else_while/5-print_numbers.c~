@@ -12,16 +12,10 @@
 
 int main(void)
 {
-	int w, x;
+	int n;
 
-	for (x = 'A'; x <= 'Z'; x++)
-	{
-		if (x != 'Q' && x != 'E')
-		{
-			w = tolower(x);
-			putchar(w);
-		}
-	}
-	putchar('\n');
+	for (n == 0; n < 10; n++)
+		printf("%d", n);
+	printf("\n");
 	return (0);
 }
