@@ -38,6 +38,6 @@ int main(void)
 						putchar(' ');
 					}
 				}
-		}
+			}
 	return (0);
 }
