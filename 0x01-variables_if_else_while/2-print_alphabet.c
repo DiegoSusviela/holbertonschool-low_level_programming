@@ -11,12 +11,9 @@
  */
 int main(void)
 {
-	int w,x;
+	int x;
 
-	for (x = 'A'; x <= 'Z'; x++)
-	{
-		w = tolower(x);
-		putchar(w);
-	}
+	for (x = 'a'; x <= 'z'; x++)
+		putchar(x);
 	return (0);
 }
