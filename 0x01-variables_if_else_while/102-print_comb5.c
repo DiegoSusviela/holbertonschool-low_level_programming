@@ -15,7 +15,7 @@ int main(void)
 	int d1, d2, u1, u2, i;
 
 	for (d1 = '0'; d1 <= '9'; d1++)
-		for (u1 = '0'; u1 <= '8'; u1++)
+		for (u1 = '0'; u1 <= '9'; u1++)
 			for (d2 = d1; d2 <= '9'; d2++)
 			{
 				if (d1 == d2)
@@ -31,6 +31,7 @@ int main(void)
 					putchar(u2);
 					if (d1 == '9' && u1 == '8' && d1 == '9' && u2 == '9')
 					{
+						break;
 					}
 					else
 					{
