@@ -12,7 +12,7 @@
 
 int main(void)
 {
-int d1, d2, u1, u2;
+int d1, d2, u1, u2, i;
   
 for (d1 = '0'; d1 <= '9'; d1++)
 for (u1 = '0'; u1 <= '8'; u1++)
