@@ -14,13 +14,13 @@ int main(void)
 {
 	int c, d, u;
 
-	for (c = 0; c <= '7'; c++)
+	for (c = '0'; c <= '7'; c++)
 		for (d = c + 1; d <= '8'; d++)
-			for (u = d + 1; u <= 9; u++)
+			for (u = d + 1; u <= '9'; u++)
 			{
-				putchar(c + '0');
-				putchar(d + '0');
-				putchar(u + '0');
+				putchar(c);
+				putchar(d);
+				putchar(u);
 				if (c == '7' && d == '8' && u == '9')
 				{
 				}
