@@ -1,4 +1,4 @@
-#include <stdlib.h>
+include <stdlib.h>
 #include <time.h>
 #include <stdio.h>
 #include <ctype.h>
@@ -12,7 +12,7 @@
 
 int main(void)
 {
-	char x;
+	int x;
 
 	for (x = '0'; x <= '9'; x++)
 	{
@@ -23,5 +23,6 @@ int main(void)
 			putchar(' ');
 		}
 	}
+	putchar('\n');
 	return (0);
 }
