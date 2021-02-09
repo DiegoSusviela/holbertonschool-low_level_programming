@@ -38,5 +38,6 @@ int main(void)
 		if (((contador % 3) == 0) || ((contador % 5) == 0))
 			suma = suma + contador;
 	print_num(suma);
+	_putchar('\n');
 	return (suma);
 }
