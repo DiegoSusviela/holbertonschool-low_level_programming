@@ -10,6 +10,7 @@
 void jack_bauer(void)
 {
 	int hour1, hour2, min1, min2, tope;
+
 	for (hour1 = 0; hour1 <= 2; hour1++)
 	{
 		if (hour1 == 2)
