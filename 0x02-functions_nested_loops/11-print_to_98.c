@@ -1,14 +1,13 @@
 #include "holberton.h"
 
 /**
- * print_to_98 - Entry point
  * imprimir - imprime
  *@num: numero a imprimir
- *@n: numero que pasan
  *
  * Description: Show a message blablabla
  * Return: Always 0 (Success)
  */
+
 void imprimir(int num)
 {
   int resto;
@@ -21,6 +20,14 @@ void imprimir(int num)
     }
   _putchar('0' + resto);
 }
+
+/**
+ * print_to_98 - Entry point
+ *@n: numero que pasan
+ *
+ * Description: Show a message blablabla
+ * Return: Always 0 (Success)
+ */
 
 void print_to_98(int n)
 {
