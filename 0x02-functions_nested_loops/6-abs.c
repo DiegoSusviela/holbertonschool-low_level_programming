@@ -2,6 +2,7 @@
 
 /**
  * _abs - Entry point
+ * @x: wopa
  *
  * Description: Show a message blablabla
  * Return: Always 0 (Success)
