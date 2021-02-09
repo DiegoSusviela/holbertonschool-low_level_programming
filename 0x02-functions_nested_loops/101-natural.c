@@ -21,7 +21,6 @@ void print_num(int num)
 	_putchar('0' + resto);
 }
 
-#include "holberton.h"
 
 /**
  * main - imprime
