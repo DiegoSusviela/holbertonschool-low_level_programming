@@ -7,7 +7,7 @@
  * Return: Always 0 (Success)
  */
 
-void print_n_low(void)
+void print_n_low(int comb, int y, int n)
 {
 	if (y != n)
 	{
@@ -36,8 +36,10 @@ void print_n_low(void)
  * Return: Always 0 (Success)
  */
 
-void print_n_med(void)
+void print_n_med(int comb, int y, int n)
 {
+	int uni, dec;
+
 	_putchar(' ');
 	uni = comb % 10;
 	dec = comb / 10;
@@ -60,8 +62,10 @@ void print_n_med(void)
  * Return: Always 0 (Success)
  */
 
-void print_n_high(void)
+void print_n_high(int comb, int y, int n)
 {
+	int uni, dec, cen;
+
 	uni = comb % 10;
 	dec = (comb / 10) % 10;
 	cen = comb / 100;
@@ -88,7 +92,7 @@ void print_n_high(void)
 
 void print_times_table(int n)
 {
-	int y, x, comb, uni, dec, cen;
+	int y, x, comb;
 
 	if (n <= 15 && n >= 0)
 		for (x = 0; x <= n; x++)
@@ -96,11 +100,11 @@ void print_times_table(int n)
 			{
 				comb = x * y;
 				if (comb < 10)
-					print_n_low();
+					print_n_low(comb, y, n);
 				else
 					if (comb < 100)
-						print_n_med();
+						print_n_med(comb, y, n);
 					else
-						print_n_high();
+						print_n_high(comb, y, n);
 			}
 }
