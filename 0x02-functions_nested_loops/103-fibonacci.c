@@ -15,16 +15,13 @@ int main(void)
 	{
 		if (t1 % 2 == 0)
 		{
-			if (i != 32)
-				printf("%ld, ", t1);
-			else
-				printf("%ld", t1);
+			suma = suma + t1;
 		}
 		nextTerm = t1 + t2;
 		t1 = t2;
 		t2 = nextTerm;
 
 	}
-	printf("\n");
+	printf("%lld\n", suma);
 	return (0);
 }
