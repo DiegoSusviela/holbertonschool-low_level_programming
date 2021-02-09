@@ -25,10 +25,18 @@ void print_n_low(int comb, int y, int n)
 	}
 	else
 	{
-		_putchar(' ');
-		_putchar(' ');
-		_putchar('0' + comb);
-		_putchar('\n');
+		if (y ==  0)
+		{
+			_putchar('0' + comb);
+			_putchar('\n');
+		}
+			else
+		{
+			_putchar(' ');
+			_putchar(' ');
+			_putchar('0' + comb);
+			_putchar('\n');
+		}
 	}
 }
 
