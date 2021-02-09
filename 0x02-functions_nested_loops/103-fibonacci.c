@@ -22,6 +22,6 @@ int main(void)
 		t2 = nextTerm;
 
 	}
-	printf("%lld\n", suma);
+	printf("%ld\n", suma);
 	return (0);
 }
