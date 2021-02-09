@@ -9,14 +9,14 @@
 
 int main(void)
 {
-	int i, t1 = 1, t2 = 2, nextTerm;
+	long long int i, t1 = 1, t2 = 2, nextTerm;
 
 	for (i = 1; i <= 50; ++i)
 	{
 		if (i != 50)
-			printf("%d, ", t1);
+			printf("%lld, ", t1);
 		else
-			printf("%d", t1);
+			printf("%lld", t1);
 		nextTerm = t1 + t2;
 		t1 = t2;
 		t2 = nextTerm;
