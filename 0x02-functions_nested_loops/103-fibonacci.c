@@ -9,18 +9,18 @@
 
 int main(void)
 {
-	long int i, t1 = 1, t2 = 2, nextTerm, suma;
+	long int t1 = 1, t2 = 2, nextTerm, suma;
 
-	for (i = 1; t1 <= 4000000 ; ++i)
+	suma = 0;
+	while  (t2 <= 4000000)
 	{
+		nextTerm = t1 + t2;
+		t1 = t2;
+		t2 = nextTerm;
 		if (t1 % 2 == 0)
 		{
 			suma = suma + t1;
 		}
-		nextTerm = t1 + t2;
-		t1 = t2;
-		t2 = nextTerm;
-
 	}
 	printf("%ld\n", suma);
 	return (0);
