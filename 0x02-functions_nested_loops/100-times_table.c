@@ -103,7 +103,7 @@ void print_times_table(int n)
 {
 	int y, x, comb;
 
-	if (n < 15 && n > 0)
+	if (n <= 15 && n => 0)
 		for (x = 0; x <= n; x++)
 			for (y = 0; y <= n; y++)
 			{
