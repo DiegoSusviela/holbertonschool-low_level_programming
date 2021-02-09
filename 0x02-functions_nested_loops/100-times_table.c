@@ -2,6 +2,9 @@
 
 /**
  * print_n_low - Entry point
+ * @y: woopa
+ * @n: wopa
+ * @comb: wopa
  *
  * Description: Show a message blablabla
  * Return: Always 0 (Success)
@@ -31,6 +34,9 @@ void print_n_low(int comb, int y, int n)
 
 /**
  * print_n_med - Entry point
+ * @y: woopa
+ * @n: wopa
+ * @comb: woopa
  *
  * Description: Show a message blablabla
  * Return: Always 0 (Success)
@@ -57,6 +63,9 @@ void print_n_med(int comb, int y, int n)
 }
 /**
  * print_n_high - Entry point
+ * @y: woopa
+ * @n: wopa
+ * @comb: woopa
  *
  * Description: Show a message blablabla
  * Return: Always 0 (Success)
