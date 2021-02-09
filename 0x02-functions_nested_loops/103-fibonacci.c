@@ -9,7 +9,7 @@
 
 int main(void)
 {
-	long int i, t1 = 1, t2 = 2, nextTerm;
+	long int i, t1 = 1, t2 = 2, nextTerm, suma;
 
 	for (i = 1; i <= 32; ++i)
 	{
