@@ -2,13 +2,13 @@
 
 
 /**
- * print_numbers - Entry point
+ * print_most_numbers - Entry point
  *
  * Description: Show a message blablabla
  * Return: Always 0 (Success)
  */
 
-void print_numbers(void)
+void print_most_numbers(void)
 {
 	int numero;
 
