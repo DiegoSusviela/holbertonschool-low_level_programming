@@ -12,6 +12,7 @@ void more_numbers(void)
 	int i, a, numero, b;
 
 	for (i = 0 ; i <= 9; i++)
+	{
 		for (numero = 0; numero <= 14; numero++)
 		{
 			b = numero % 10;
@@ -22,5 +23,6 @@ void more_numbers(void)
 			}
 			_putchar('0' + b);
 		}
-	       	_putchar('\n');
+	_putchar('\n');
+	}
 }
