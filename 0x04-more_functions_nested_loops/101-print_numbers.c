@@ -1,8 +1,8 @@
 #include "holberton.h"
 
 /**
- * imprimir - Entry point
- * @num: wopa
+ * print_number - Entry point
+ * @n: wopa
  *
  * Description: Show a message blablabla
  * Return: Always 0 (Success)
