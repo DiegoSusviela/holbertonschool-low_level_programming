@@ -10,7 +10,8 @@
 int main(void)
 {
 	long int a, n = 612852475143;
-	for (a = 2; a < 782848; a++)
+
+	for (a = 2; a < n; a++)
 		if (n % a == 0)
 			n = n / a;
 	printf("%ld\n", a);
