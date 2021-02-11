@@ -1,8 +1,11 @@
-#rimir - Entry point
-* @num: wopa
+#include "holberton.h"
+
+/**
+ * imprimir - Entry point
+ * @num: wopa
  *
-* Description: Show a message blablabla
-* Return: Always 0 (Success)
+ * Description: Show a message blablabla
+ * Return: Always 0 (Success)
  */
 
 void imprimir(unsigned int num)
