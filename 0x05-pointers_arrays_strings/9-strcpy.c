@@ -1,7 +1,7 @@
 #include "holberton.h"
 
 /**
- * print_triangle - Entry point
+ * *_strcpy - Entry point
  * @src: wopa
  * @dest: wooooopa
  *

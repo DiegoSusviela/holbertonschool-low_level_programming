@@ -2,7 +2,7 @@
 #include "2-strlen.c"
 
 /**
- * print_triangle - Entry point
+ * puts_half - Entry point
  * @str: wopa
  *
  * Description: Show a message blablabla
@@ -15,7 +15,7 @@ void puts_half(char *str)
 
 	tope = length / 2;
 	if (length % 2)
-		tope ++;
+		tope++;
 	while (tope < length)
 	{
 		_putchar(*(str + tope));

@@ -2,7 +2,7 @@
 #include <stdio.h>
 
 /**
- * print_triangle - Entry point
+ * print_array - Entry point
  * @a: wopa
  * @n: wooopa
  *
@@ -19,8 +19,8 @@ void print_array(int *a, int n)
 		printf("%d", a[contador]);
 		if (contador < (n - 1))
 			printf(", ");
-        else
-            printf("\n");
+		else
+			printf("\n");
 		contador++;
 	}
 }
