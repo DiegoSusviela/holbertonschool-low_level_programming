@@ -1,7 +1,7 @@
 #include "holberton.h"
 
 /**
- * print_triangle - Entry point
+ * rev_string - Entry point
  * @s: wopa
  *
  * Description: Show a message blablabla

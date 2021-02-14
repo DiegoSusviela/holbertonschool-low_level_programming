@@ -1,7 +1,7 @@
 #include "holberton.h"
 
 /**
- * print_triangle - Entry point
+ * puts2 - Entry point
  * @str: wopa
  *
  * Description: Show a message blablabla

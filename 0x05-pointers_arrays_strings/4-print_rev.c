@@ -2,7 +2,7 @@
 #include "2-strlen.c"
 
 /**
- * print_triangle - Entry point
+ * print_rev - Entry point
  * @s: wopa
  *
  * Description: Show a message blablabla
