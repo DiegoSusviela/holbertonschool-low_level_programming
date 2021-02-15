@@ -1,5 +1,4 @@
 #include "holberton.h"
-#include "2-strlen.c"
 
 /**
  * puts2 - Entry point
@@ -11,7 +10,7 @@
 
 void puts2(char *str)
 {
-	char contador = 0;
+	int contador = 0;
 
 		while (*(str + contador))
 		{
