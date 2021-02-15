@@ -11,7 +11,7 @@
 
 void puts2(char *str)
 {
-	int contador = 0;
+	char contador = 0;
 
 	if (_strlen(str) > 0)
 		while (*(str + contador))
