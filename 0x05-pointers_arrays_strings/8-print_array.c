@@ -3,8 +3,8 @@
 
 /**
  * print_array - Entry point
- * @a: wopa
- * @n: wooopa
+ * @a: array
+ * @n: amount of numbers to print
  *
  * Description: Show a message blablabla
  * Return: Always 0 (Success)
@@ -19,8 +19,7 @@ void print_array(int *a, int n)
 		printf("%d", a[contador]);
 		if (contador < (n - 1))
 			printf(", ");
-		else
-			printf("\n");
 		contador++;
 	}
+	printf("\n");
 }
