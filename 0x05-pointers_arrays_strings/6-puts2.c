@@ -12,7 +12,7 @@ void puts2(char *str)
 {
 	int contador = 0;
 
-	if (_strlen(s) > 0)
+	if (_strlen(str) > 0)
 		while (*(str + contador))
 		{
 			_putchar(*(str + contador));
