@@ -7,7 +7,6 @@
  * Description: Show a message blablabla
  * Return: Always 0 (Success)
  */
-
 void puts2(char *str)
 {
 	int contador = 0;
