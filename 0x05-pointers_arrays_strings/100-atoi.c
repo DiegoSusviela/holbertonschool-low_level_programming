@@ -18,7 +18,7 @@ int get_first(char *s, int finder1)
 
 /**
  * _atoi - Entry point
- * @s: wopa
+ * @s: wopaa
  *
  * Description: Show a message blablabla
  * Return: Always 0 (Success)
