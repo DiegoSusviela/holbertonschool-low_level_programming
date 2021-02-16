@@ -10,7 +10,7 @@
 
 int _atoi(char *s)
 {
-	int finder1 = 0, finder2, num = 0, sign = 1;
+	int finder1 = 0, num = 0, sign = 1;
 
 	while ((*(s + finder1) > '9' || *(s + finder1) < '0') && (*(s + finder1) != '\0'))
 	{
@@ -18,11 +18,10 @@ int _atoi(char *s)
 			sign *= -1;
 		finder1++;
 	}
-	finder2 = finder1;
-	while ((*(s + finder2) >= '0') && (*(s + finder2) <= '9'))
+	while ((*(s + finder1) >= '0') && (*(s + finder1) <= '9'))
 	{
-		num = num * 10 + sign * (*(s + finder2) - '0');
-		finder2++;
+		num = num * 10 + sign * (*(s + finder1) - '0');
+		finder1++;
 	}
 	return (num);
 }
