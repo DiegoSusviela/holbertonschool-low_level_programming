@@ -16,7 +16,7 @@ void puts2(char *str)
 			_putchar(*(str + contador));
 			if (*(str + contador + 1))
 				contador += 2;
-			else 
+			else
 				contador++;
 		}
 		_putchar('\n');
