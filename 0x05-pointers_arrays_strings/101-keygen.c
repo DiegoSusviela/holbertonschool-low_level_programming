@@ -23,7 +23,7 @@ int main(void)
 		pw[pos_pw] = carac_posib[random_pos];
 		sum_cond = sum_cond + carac_posib[random_pos];
 		pos_pw++;
-	}		        
+	}
 	pw[pos_pw] = 2772 - sum_cond;
 	pos_pw++;
 	pw[pos_pw] = '\0';
