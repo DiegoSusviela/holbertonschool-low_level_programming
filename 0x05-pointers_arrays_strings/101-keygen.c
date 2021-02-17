@@ -16,8 +16,6 @@ int main(void)
 	char pw[58];
 
     	srand(time(NULL));
-	while (Sum_cond != 2772)
-	{
 		Pos_pw = Sum_cond = filling = 0;
 		while ((2650) > Sum_cond)
 		{
@@ -25,20 +23,9 @@ int main(void)
 			pw[Pos_pw] = carac_posib[random_pos];
 			Sum_cond = Sum_cond + carac_posib[random_pos];
 			Pos_pw++;
-		}
-		while (carac_posib[filling])        
-		{
-			if (carac_posib[filling] == (2772 - Sum_cond))          
-			{
-				pw[Pos_pw] = carac_posib[filling];
-				Sum_cond = Sum_cond + carac_posib[random_pos];
-				Pos_pw++;
-				break;            
-			}
-			filling++;           
-		}
-
-	}
+		}		        
+	pw[Pos_pw] = 2772 - Sum_cond;
+	Pos_pw++;
 	pw[Pos_pw] = '\0';
 	printf("%s", pw);
 	return (0);
