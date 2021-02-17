@@ -28,7 +28,18 @@ int main(void)
 			Sum_cond = Sum_cond + carac_posib[random_pos];
 			Pos_pw++;
 		}
-        pw[Pos_pw] = 2772 - Sum_cond;
+		while (carac_posib[filling])        
+		{
+			if (carac_posib[filling] == (2772 - Sum_cond))          
+			{
+				pw[Pos_pw] = carac_posib[filling];
+				Sum_cond = Sum_cond + carac_posib[random_pos];
+				Pos_pw++;
+				break;            
+			}
+			filling++;           
+		}
+
 	}
 	printf("%s", pw);
 	return (0);
