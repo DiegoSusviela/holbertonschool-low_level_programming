@@ -15,15 +15,13 @@ int main(void)
 	char carac_posib[] = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz"; 
 	char pw[58];
 
-    pw[58] = '\0';
-
-	srand(time(NULL));
+    	srand(time(NULL));
 	while (Sum_cond != 2772)
 	{
 		Pos_pw = Sum_cond = filling = 0;
-		while ((2650) > Sum_cond)/*2772 - 122 asi no me paso, siendo 122 valor mas alto de ascii de dichos caracteres (z)*/
+		while ((2650) > Sum_cond)
 		{
-			random_pos = rand() % 62;/*lleno la pw haciendo que la suma del valor ascii de los caracteres no se pase de*/
+			random_pos = rand() % 62;
 			pw[Pos_pw] = carac_posib[random_pos];
 			Sum_cond = Sum_cond + carac_posib[random_pos];
 			Pos_pw++;
@@ -41,6 +39,7 @@ int main(void)
 		}
 
 	}
+	pw[Pos_pw] = '\0';
 	printf("%s", pw);
 	return (0);
 }
