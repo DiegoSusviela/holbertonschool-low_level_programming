@@ -29,18 +29,7 @@ int main(void)
 			Pos_pw++;
 		}
         pw[Pos_pw] = 2772 - Sum_cond;
-/*		while (carac_posib[filling])        Tengo que llenar los ultimos 122 o menos con caracteres para llenar la pw
-*		{
-*			if (carac_posib[filling] == (2772 - Sum_cond))          aca checkeo si estoy parado en el caracter que me llena la suma de la pw correcta
-*			{
-*				pw[Pos_pw] = carac_posib[filling];
-*				Sum_cond = Sum_cond + carac_posib[random_pos];
-*				Pos_pw++;
-*				break;            para salir del while que filea
-*			}
-*			filling++;           me sigo moviendo asi encuentro ese caracter para rellenar la suma hasta 2772
-*		}
-*/	}
+	}
 	printf("%s", pw);
 	return (0);
 }
