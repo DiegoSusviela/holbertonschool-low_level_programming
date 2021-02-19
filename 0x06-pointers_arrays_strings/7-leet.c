@@ -11,8 +11,8 @@
 char *leet(char *s)
 {
 	int position, count;
-	char be_remplaced[11] = "aAeEoOtTlL";
-	char to_remplace[11] = "4433007711";
+	char be_remplaced[] = "aAeEoOtTlL";
+	char to_remplace[] = "4433007711";
 
 	while (s[position] != '\0')
 {
