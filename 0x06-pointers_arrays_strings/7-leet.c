@@ -12,13 +12,13 @@ char *leet(char *s)
 {
 	int position, count;
 	char be_remplaced[11] = "aAeEoOtTlL";
-	char to_remplace[6] = "43071";
+	char to_remplace[11] = "4433007711";
 
 	while (s[position] != '\0')
 {
-		for (count = 1; count <= 10; count++)
+		for (count = 0; count <= 10; count++)
 			if (be_remplaced[count] == s[position])
-				s[position] = to_remplace[count / 2];
+				s[position] = to_remplace[count];
 position++;
 }
 return (s);
