@@ -16,7 +16,7 @@ char *leet(char *s)
 
 	while (s[position] != '\0')
 {
-		for (count = 0; count <= 10; count++)
+		for (count = 0; count <= 9; count++)
 			if (be_remplaced[count] == s[position])
 				s[position] = to_remplace[count];
 position++;
