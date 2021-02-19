@@ -15,7 +15,7 @@ char *cap_string(char *s)
 
 	while (s[position] != '\0')
 	{
-		if (s[position] >= 'a' && s[position] <= 'z')
+		if ((s[position] >= 'a') && (s[position] <= 'z'))
 			if (position == 0)
 				s[position] = s[position] - 'a' + 'A';
 			else
