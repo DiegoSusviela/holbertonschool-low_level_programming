@@ -20,7 +20,7 @@ char *leet(char *str1)
 			if (be_remplaced[count] == str1[position])
 {
 				str1[position] = to_remplace[count];
-                count = 9;
+count = 9;
 }
 position++;
 }
