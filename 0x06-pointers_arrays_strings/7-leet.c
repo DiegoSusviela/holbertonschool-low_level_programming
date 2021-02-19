@@ -17,11 +17,8 @@ char *leet(char *str1)
 	while (str1[position] != '\0')
 {
 		for (count = 0; count <= 9; count++)
-        {
 			if (be_remplaced[count] == str1[position])
 				str1[position] = to_remplace[count];
-            count = 9;
-        }
 position++;
 }
 return (str1);
