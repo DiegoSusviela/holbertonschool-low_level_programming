@@ -10,7 +10,7 @@
 
 char *leet(char *str1)
 {
-	int position, count;
+	int position = 0, count;
 	char be_remplaced[] = "aAeEoOtTlL";
 	char to_remplace[] = "43071";
 
