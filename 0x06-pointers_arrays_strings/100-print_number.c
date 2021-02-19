@@ -11,7 +11,6 @@
 void print_number(int n)
 {
 	unsigned int num;
-	int resto;
 
 	if (n < 0)
 	{
@@ -20,10 +19,9 @@ void print_number(int n)
 	}
 	else
 		num = n;
-	if (num >= 10)
+	if (num / 10 != 0)
 	{
-		num = num / 10;
-		imprimir(num);
+		print_number(num / 10);
 	}
-	_putchar('0' + resto);
+	_putchar('0' + (num % 10));
 }
