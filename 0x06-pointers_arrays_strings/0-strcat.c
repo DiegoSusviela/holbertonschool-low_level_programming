@@ -16,7 +16,7 @@ int start, count;
 	start = count = 0;
 	while (dest[start] != '\0')
 		start++;
-	while (dest[start] = src[count])
+	while ((dest[start] = src[count]))
 	{
 		start++;
 		count++;
