@@ -3,7 +3,7 @@
 /**
  * cap_string - Entry point
  * @s: wopa
- * 
+ *
  * Description: Show a message blablabla
  * Return: Always 0 (Success)
  */

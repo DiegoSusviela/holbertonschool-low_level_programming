@@ -4,7 +4,7 @@
  * _strcmp - Entry point
  * @s2: wopa
  * @s1: woopa
- * 
+ *
  * Description: Show a message blablabla
  * Return: Always 0 (Success)
  */

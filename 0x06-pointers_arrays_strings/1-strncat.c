@@ -5,14 +5,14 @@
  * @dest: wopa
  * @src: woopa
  * @n: woopa
- * 
+ *
  * Description: Show a message blablabla
  * Return: Always 0 (Success)
  */
 
 char *_strncat(char *dest, char *src, int n)
 {
-    int start, count;
+int start, count;
 
 	start = count = 0;
 	while (dest[start] != '\0')
@@ -23,6 +23,6 @@ char *_strncat(char *dest, char *src, int n)
 		count++;
 	}
 	if (count < n)
-		dest[start]= src[count];
+		dest[start] = src[count];
 	return (dest);
 }

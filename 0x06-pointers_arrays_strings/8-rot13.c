@@ -3,7 +3,7 @@
 /**
  * rot13 - Entry point
  * @s: wopa
- * 
+ *
  * Description: Show a message blablabla
  * Return: Always 0 (Success)
  */
@@ -22,7 +22,7 @@ char *rot13(char *s)
 				s[position] = enco_out[count];
 				count = 52;
 			}
-        position++;
+position++;
 	}
 	return (s);
 }
