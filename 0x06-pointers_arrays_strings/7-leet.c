@@ -19,7 +19,7 @@ char *leet(char *s)
 		for (count = 1; count <= 10; count++)
 			if (be_remplaced[count] == s[position])
 				s[position] = to_remplace[count / 2];
-    position++;
+position++;
 }
 return (s);
 }
