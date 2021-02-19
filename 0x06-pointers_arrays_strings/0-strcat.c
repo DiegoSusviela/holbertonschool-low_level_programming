@@ -4,7 +4,7 @@
  * _strcat - Entry point
  * @dest: wopa
  * @src: woopa
- * 
+ *
  * Description: Show a message blablabla
  * Return: Always 0 (Success)
  */
