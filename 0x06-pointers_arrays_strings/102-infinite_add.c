@@ -47,7 +47,7 @@ return (0);
  * Description: Show a message blablabla
  * Return: Always 0 (Success)
  */
-char *v_v (char *n1, int *p1, int *p2, int *p3, int *rs, char *r, char *n2)
+char *v_v(char *n1, int *p1, int *p2, int *p3, int *rs, char *r, char *n2)
 {
 while ((*p1 > 0) && (*p2 > 0), (*p1)--, (*p2)--)
 {
@@ -68,7 +68,7 @@ return (r);
  * Description: Show a message blablabla
  * Return: Always 0 (Success)
  */
-char *viendo_voy (char *n1, int *p1, int *p3, int *rs, char *r)
+char *viendo_voy(char *n1, int *p1, int *p3, int *rs, char *r)
 {
 while (*p1 >= 0)
 {
