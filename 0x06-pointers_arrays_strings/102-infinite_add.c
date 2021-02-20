@@ -14,7 +14,7 @@ int marker = 0;
 
 while (s[marker] != '\0')
 marker++;
-    return (marker);
+return (marker);
 }
 
 /**
@@ -29,55 +29,55 @@ marker++;
 
 int calc_rest(int a, int b, int c)
 {
-    if ((a + b + c) > 9)
-        return (1);
-    return (0);
+if ((a + b + c) > 9)
+return (1);
+return (0);
 }
 
 /**
- * voy_viendo - imprime
- * @position1: numero a imprimir
+ * v_v - imprime
+ * @p1: numero a imprimir
  * @n1: dajdskj
- * @position2: skjd
- * @position3: nogsd
- * @resto: dfgdfh
+ * @p2: skjd
+ * @p3: nogsd
+ * @rs: dfgdfh
  * @size_r: sff
  * @r: fioansfo
  *
  * Description: Show a message blablabla
  * Return: Always 0 (Success)
  */
-char *voy_viendo (char *n1, int *position1, int *position2, int *position3, int *resto, int size_r, char *r, char *n2)
+char *v_v (char *n1, int *p1, int *p2, int *p3, int *rs, char *r, char *n2)
 {
-    while ((*position1 > 0) && (*position2 > 0), (*position1)--, (*position2)--)
-    {
-        r[*position3] = '0' + (((n1[*position1] - '0') + (n2[*position2] - '0') + *resto) % 10);
-        *resto = calc_rest(n2[*position2] - '0', n1[*position1] - '0', *resto);
-        *position3 = *position3 - 1;
-    }
-    return (r);
+while ((*p1 > 0) && (*p2 > 0), (*p1)--, (*p2)--)
+{
+r[*p3] = '0' + (((n1[*p1] - '0') + (n2[*p2] - '0') + *rs) % 10);
+*rs = calc_rest(n2[*p2] - '0', n1[*p1] - '0', *rs);
+*p3 = *p3 - 1;
+}
+return (r);
 }
 /**
  * viendo_voy - imprime
- * @position1: numero a imprimir
+ * @p1: numero a imprimir
  * @n1: dajdskj
- * @position3: nogsd
- * @resto: dfgdfh
+ * @p3: nogsd
+ * @rs: dfgdfh
  * @r: fioansfo
  *
  * Description: Show a message blablabla
  * Return: Always 0 (Success)
  */
-char *viendo_voy (char *n1, int *position1, int *position3, int *resto, char *r)
+char *viendo_voy (char *n1, int *p1, int *p3, int *rs, char *r)
 {
-    while (*position1 >= 0)
-    {
-        r[*position3] = ((n1[*position1] - '0') + *resto) % 10 + '0';
-        *resto = calc_rest(0, n1[*position1] - '0', *resto);
-        (*position1)--;
-        (*position3)--;
-    }
-    return (r);
+while (*p1 >= 0)
+{
+r[*p3] = ((n1[*p1] - '0') + *rs) % 10 + '0';
+*rs = calc_rest(0, n1[*p1] - '0', *rs);
+(*p1)--;
+(*p3)--;
+}
+return (r);
 }
 /**
  * viendo_voy - imprime
@@ -92,34 +92,34 @@ char *viendo_voy (char *n1, int *position1, int *position3, int *resto, char *r)
 
 char *infinite_add(char *n1, char *n2, char *r, int size_r)
 {
-    int position1 = _strlen(n1), position2 = _strlen(n2), position3 = (size_r - 2), resto = 0, counter, n;
+int p1 = _strlen(n1), p2 = _strlen(n2), p3 = (size_r - 2), rs = 0, counter, n;
 
-    if ((position1 > (size_r - 1)) || (position2 > (size_r - 1)))
-        return (0);
-    r = voy_viendo(n1, &position1, &position2, &position3, &resto, size_r, r, n2);
-    if (position1 < 0)
-    {
-        r = viendo_voy(n2, &position2, &position3, &resto, r);
-         if ((position2 < 0) && (resto == 1))
-            if (position3 < 0)
-                return (0);
-            else
-                r[position3] = '1';
-    }
-    else
-    {
-        r = viendo_voy(n1, &position1, &position3, &resto, r);
-        if ((resto == 1) && (position3 < 0))
-                return (0);
-        r[position3] = resto + '0';
-    }
-    counter = 0;
-    while (position3 != (size_r - 1))
-    {
-        r[counter] = r[position3];
-        counter++;
-        position3++;
-    }
-    r[counter] = '\0';
-    return (r);
+if ((p1 > (size_r - 1)) || (p2 > (size_r - 1)))
+return (0);
+r = v_v(n1, &p1, &p2, &p3, &rs, r, n2);
+if (p1 < 0)
+{
+r = viendo_voy(n2, &p2, &p3, &rs, r);
+if ((p2 < 0) && (rs == 1))
+if (p3 < 0)
+return (0);
+else
+r[p3] = '1';
+}
+else
+{
+r = viendo_voy(n1, &p1, &p3, &rs, r);
+if ((rs == 1) && (p3 < 0))
+return (0);
+r[p3] = rs + '0';
+}
+counter = 0;
+while (p3 != (size_r - 1))
+{
+r[counter] = r[p3];
+counter++;
+p3++;
+}
+r[counter] = '\0';
+return (r);
 }
