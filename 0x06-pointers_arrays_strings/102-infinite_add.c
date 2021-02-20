@@ -48,7 +48,7 @@ return (0);
  * Return: Always 0 (Success)
  */
 char *v_v(char *n1, int *p1, int *p2, int *p3, int *rs, char *r, char *n2)
-{    
+{
 while ((*p1 > 0) && (*p2 > 0))
 {
 (*p1)--;
