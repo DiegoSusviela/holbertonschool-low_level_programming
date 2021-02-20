@@ -48,9 +48,11 @@ return (0);
  * Return: Always 0 (Success)
  */
 char *v_v(char *n1, int *p1, int *p2, int *p3, int *rs, char *r, char *n2)
+{    
+while ((*p1 > 0) && (*p2 > 0))
 {
-while (((*p1 > 0) && (*p2 > 0)), (*p1)--, (*p2)--)
-{
+(*p1)--;
+(*p2)--;
 r[*p3] = '0' + (((n1[*p1] - '0') + (n2[*p2] - '0') + *rs) % 10);
 *rs = calc_rest(n2[*p2] - '0', n1[*p1] - '0', *rs);
 *p3 = *p3 - 1;
