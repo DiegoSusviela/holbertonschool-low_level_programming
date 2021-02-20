@@ -41,10 +41,12 @@ char *infinite_add(char *n1, char *n2, char *r, int size_r)
     if (position1 < 0)
     {
         if ((position2 < 0) && (resto == 1))
+        {
             if (position3 < 0)
                 return (0);
             else
                 r[position3] = '1';
+        }
         while (position2 >= 0)
         {
             aux = ((n2[position2] - '0') + resto) % 10;
@@ -57,10 +59,12 @@ char *infinite_add(char *n1, char *n2, char *r, int size_r)
             position3--;
         }
         if ((position2 < 0) && (resto == 1))
+        {
             if (position3 < 0)
                 return (0);
             else
                 r[position3] = '1';
+        }
     }
     else
     {
