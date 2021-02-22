@@ -46,7 +46,7 @@ char *viendo_voy (char *n1, int *position1, int *position3, int *resto, char *r)
 
 char *infinite_add(char *n1, char *n2, char *r, int size_r)
 {
-    int position1 = _strlen(n1), position2 = _strlen(n2), position3 = (size_r - 2), resto = 0, counter, n;
+    int position1 = _strlen(n1), position2 = _strlen(n2), position3 = (size_r - 2), resto = 0, counter;
 
     if ((position1 > (size_r - 1)) || (position2 > (size_r - 1)))
         return (0);
@@ -82,6 +82,8 @@ char *infinite_add(char *n1, char *n2, char *r, int size_r)
         r[position3] = resto + '0';
     }
     counter = 0;
+    if (position3 < 0)
+        position3++;
     while (position3 != (size_r - 1))
     {
         r[counter] = r[position3];
