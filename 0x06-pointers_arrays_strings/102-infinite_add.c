@@ -47,6 +47,7 @@ return (0);
  * Description: Show a message blablabla
  * Return: Always 0 (Success)
  */
+
 char *v_v(char *n1, int *p1, int *p2, int *p3, int *rs, char *r, char *n2)
 {
 while ((*p1 > 0) && (*p2 > 0))
@@ -61,6 +62,7 @@ r[*p3] = '0' + (((n1[*p1] - '0') + (n2[*p2] - '0') + *rs) % 10);
 (*p2)--;
 return (r);
 }
+
 /**
  * viendo_voy - imprime
  * @p1: numero a imprimir
@@ -72,6 +74,7 @@ return (r);
  * Description: Show a message blablabla
  * Return: Always 0 (Success)
  */
+
 char *viendo_voy(char *n1, int *p1, int *p3, int *rs, char *r)
 {
 while (*p1 >= 0)
@@ -83,6 +86,7 @@ r[*p3] = ((n1[*p1] - '0') + *rs) % 10 + '0';
 }
 return (r);
 }
+
 /**
  * infinite_add - imprime
  * @n1: numero a imprimir
