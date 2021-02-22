@@ -113,7 +113,10 @@ if ((p2 < 0) && (rs == 1))
 if (p3 < 0)
 return (0);
 else
-r[p3] = '1';
+{
+r[p3] = rs + '0';
+p3--;
+}
 }
 }
 else
@@ -122,9 +125,9 @@ r = viendo_voy(n1, &p1, &p3, &rs, r);
 if ((rs == 1) && (p3 < 0))
 return (0);
 r[p3] = rs + '0';
+p3--;
 }
 counter = 0;
-if (p3 < 0)
 p3++;
 while (p3 != (size_r - 1))
 {
