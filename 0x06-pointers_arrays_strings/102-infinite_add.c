@@ -84,11 +84,11 @@ r[*p3] = ((n1[*p1] - '0') + *rs) % 10 + '0';
 return (r);
 }
 /**
- * viendo_voy - imprime
- * @n2: numero a imprimir
- * @n1: dajdskj
- * @size_r: nogsd
- * @r: fioansfo
+ * infinite_add - imprime
+ * @n1: numero a imprimir
+ * @n2: dajdskj
+ * @r: nogsd
+ * @size_r: fioansfo
  *
  * Description: Show a message blablabla
  * Return: Always 0 (Success)
