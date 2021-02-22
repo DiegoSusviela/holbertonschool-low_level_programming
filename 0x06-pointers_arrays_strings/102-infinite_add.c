@@ -124,6 +124,8 @@ return (0);
 r[p3] = rs + '0';
 }
 counter = 0;
+if (p3 < 0)
+p3++;
 while (p3 != (size_r - 1))
 {
 r[counter] = r[p3];
