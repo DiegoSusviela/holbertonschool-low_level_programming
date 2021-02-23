@@ -1,7 +1,7 @@
 #include "holberton.h"
 
 /**
- *  _strchr- imprime
+ *  _strspn- imprime
  * @accept: numero a imprimir
  * @s: un char ahi
  *
