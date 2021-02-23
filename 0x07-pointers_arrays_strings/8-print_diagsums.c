@@ -2,8 +2,9 @@
 #include <stdio.h>
 
 /**
- *  print_chessboard- imprime
+ *  print_diagsums- imprime
  * @a: tablero
+ * @size: kefnsl
  *
  * Description: Show a message blablabla
  * Return: Always 0 (Success)
