@@ -3,7 +3,7 @@
 /**
  *  print_chessboard- imprime
  * @a: tablero
- * 
+ *
  * Description: Show a message blablabla
  * Return: Always 0 (Success)
  */
