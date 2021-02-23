@@ -2,24 +2,24 @@
 
 /**
  *  _strchr- imprime
- * @c: numero a imprimir
- * @s: un char ahi
- *
- * Description: Show a message blablabla
- * Return: Always 0 (Success)
- */
+* @c: numero a imprimir
+* @s: un char ahi
+*
+* Description: Show a message blablabla
+* Return: Always 0 (Success)
+*/
 
 char *_strchr(char *s, char c)
 {
 int position = 0;
 
-while(*(s + position))
+while (*(s + position))
 {
 if (*(s + position) == c)
-return ((s + position));
+return (s + position);
 position++;
 }
 if (*(s + position) == c)
-return ((s + position));
+return (s + position);
 return (0);
 }
