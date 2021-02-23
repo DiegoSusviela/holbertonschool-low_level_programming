@@ -8,13 +8,13 @@
  *
  * Description: Show a message blablabla
  * Return: Always 0 (Success)
- */
+*/
 
 char *_memcpy(char *dest, char *src, unsigned int n)
 {
-    unsigned position;
+unsigned position;
 
-    for (position = 0; position < n; position++)
-        dest[position] = src[position];
-    return (dest);
+for (position = 0; position < n; position++)
+dest[position] = src[position];
+return (dest);
 }

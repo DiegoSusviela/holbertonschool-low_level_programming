@@ -15,7 +15,7 @@ char *_strchr(char *s, char c)
 
     while(s[position])
     {
-        if (s[position] == c)
+        if (s[position] == 'c')
             return (s[position]);
         position++;
     }
