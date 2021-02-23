@@ -22,6 +22,6 @@ for (x = 0; x < size; x++)
 aux2 = (x*size) + size - 1 - x;
 diag2 += *(a + aux2);
 }
-printf("%i, %i", diag1, diag2);
+printf("%d, %d", diag1, diag2);
 printf("\n");
 }
