@@ -10,13 +10,18 @@
 
 void print_diagsums(int *a, int size)
 {
-    int diag1 = 0, diag2 = 0, x;
+int diag1 = 0, diag2 = 0, x, y, aux, aux2;
 
-    for (x = 0; x < size; x++)
-    {
-        diag1 = diag1 + a[x][x];
-        diag2 = diag2 + a[size-x-1][x];
-    }
-    printf("%i, %i", diag1, diag2);
-    printf("\n");
+for (y = 0; y < size; y++)
+{
+aux = (y*size) + y;
+diag1 += *(a + aux);
+}
+for (x = 0; x < size; x++)
+{
+aux2 = (x*size) f+ size - 1 - x;
+diag2 += *(a + aux2);
+}
+printf("%i, %i", diag1, diag2);
+printf("\n");
 }
