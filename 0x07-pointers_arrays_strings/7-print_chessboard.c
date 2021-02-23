@@ -10,10 +10,14 @@
 
 void print_chessboard(char (*a)[8])
 {
-    int x, y;
+int x, y;
+char aux;
 
-    for (x = 0; x < 8; x++)
-        for(y = 0; y < 8; y++)
-            _putchar(a[x][y]);
-        _putchar('\n');
+for (x = 0; x < 8; x++)
+for (y = 0; y < 8; y++)
+{
+aux = a[x][y];
+_putchar(aux);
+}
+_putchar('\n');
 }
