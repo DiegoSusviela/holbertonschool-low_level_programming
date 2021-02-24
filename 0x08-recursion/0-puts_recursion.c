@@ -28,6 +28,7 @@ void _puts_recursion(char *s)
 {
     int position = 0;
 
-    recursion(s, position);
+    if (*s)
+        recursion(s, position);
     _putchar('\n');
 }
