@@ -11,10 +11,10 @@
 
 void recursion(char *s, int position)
 {
-_putchar(*(s + position));
-position++;
-if (*(s + position))
-recursion(s, position);
+    _putchar(*(s + position));
+    position++;
+    if (*(s + position))
+        recursion(s, position);
 }
 
 /**
@@ -26,9 +26,9 @@ recursion(s, position);
 */
 void _puts_recursion(char *s)
 {
-int position = 0;
+    int position = 0;
 
-if (*s)
-recursion(s, position);
-_putchar('\n');
+    if (*s)
+        recursion(s, position);
+    _putchar('\n');
 }
