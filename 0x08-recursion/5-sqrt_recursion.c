@@ -2,8 +2,8 @@
 
 /**
  * recursion - imprime
- * @s: numero a imprimir
- * @counter: un char ahi
+ * @n: numero a imprimir
+ * @cand_root: un char ahi
  *
 * Description: Show a message blablabla
 * Return: Always 0 (Success)
@@ -32,5 +32,5 @@ int recursion(int n, int cand_root)
 
 int _sqrt_recursion(int n)
 {
-    return recursion(n, 0);
+    return (recursion(n, 0));
 }
