@@ -15,7 +15,7 @@ int recursion(int n, int aux)
         return (0)
     else
         if (aux > 2)
-            recursion(n, aux - 1);
+            return (recursion(n, aux - 1));
         else
             return (1);
 
