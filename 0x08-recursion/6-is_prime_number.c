@@ -19,6 +19,7 @@ return (recursion(n, aux - 1));
 else
 return (1);
 }
+
 /**
  * is_prime_number - imprime
  * @n: numero a imprimir
