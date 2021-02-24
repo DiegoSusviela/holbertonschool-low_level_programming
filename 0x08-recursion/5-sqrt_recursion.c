@@ -14,7 +14,7 @@ int recursion(int n, int cand_root)
     int aux = cand_root * cand_root;
 
     if ((aux) < n)
-        recursion(n, cand_root + 1);
+        return (recursion(n, cand_root + 1));
     else
         if (aux == n)
             return (cand_root);
