@@ -4,19 +4,19 @@
 /**
  * recursion1 - imprime
  * @s: numero a imprimir
- * @largo: un char ahi
- * @counter: kdfno
+ * @l: un char ahi
+ * @c: kdfno
  *
 * Description: Show a message blablabla
 * Return: Always 0 (Success)
 */
 
-int recursion1(char *s, int largo, int counter)
+int recursion1(char *s, int l, int c)
 {
-if (((*(s + counter)) == *(s - counter + largo - 1)) && (counter < (largo / 2)))
-return (recursion1((s), largo, counter + 1));
+if (((*(s + c)) == *(s - c + l - 1)) && (c < (l / 2)))
+return (recursion1((s), l, c + 1));
 else
-if (counter >= (largo / 2))
+if (c >= (l / 2))
 return (1);
 else
 return (0);
@@ -33,6 +33,6 @@ return (0);
 
 int is_palindrome(char *s)
 {
-int largo = _strlen_recursion(s);
-return (recursion1(s, largo, 0));
+int l = _strlen_recursion(s);
+return (recursion1(s, l, 0));
 }
