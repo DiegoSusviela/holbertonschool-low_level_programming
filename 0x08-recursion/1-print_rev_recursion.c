@@ -12,8 +12,10 @@
 void recursion(char *s, int position)
 {
     if (*(s + position))
+    {
         recursion(s, position + 1);
-    _putchar(*(s + position));
+        _putchar(*(s + position));
+    }
 }
 
 /**
