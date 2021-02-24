@@ -18,7 +18,7 @@ return (recursion(n, cand_root + 1));
 else
 if (aux == n)
 return (cand_root);
-else 
+else
 return (-1);
 }
 
