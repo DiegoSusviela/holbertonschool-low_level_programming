@@ -15,11 +15,10 @@ int recursion(int n, int cand_root)
 
 	if ((aux) < n)
 		return (recursion(n, cand_root + 1));
+	if (aux == n)
+		return (cand_root);
 	else
-		if (aux == n)
-			return (cand_root);
-		else
-			return (-1);
+		return (-1);
 }
 
 /**

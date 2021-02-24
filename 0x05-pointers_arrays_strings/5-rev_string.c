@@ -13,7 +13,7 @@ void rev_string(char *s)
 	int contador = 0, marker = 0;
 	char aux[999];
 
-	while (*(s + contador))
+	while (*(s + contador))  // while (s[contador] != \0) )
 	{
 		*(aux + contador) = *(s + contador);
 		contador++;
@@ -21,7 +21,7 @@ void rev_string(char *s)
 	contador--;
 	while (contador >= 0)
 	{
-		*(s + contador) = *(aux + marker);
+		*(s + contador) = *(aux + marker);  // s[contador] = aux[marker];
 		marker++;
 		contador--;
 	}

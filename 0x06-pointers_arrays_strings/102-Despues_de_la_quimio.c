@@ -65,7 +65,7 @@ char *infinite_add(char *n1, char *n2, char *r, int size_r)
             if (position3 < 0)
                 return (0);
             else
-                r[position3] = '1';
+                r[position3] = resto + '0';
     }
     else
     {

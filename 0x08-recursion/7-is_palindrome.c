@@ -15,11 +15,9 @@ int recursion1(char *s, int l, int c)
 {
 	if ((*(s + c)) == *(s - c + l - 1) && (c < (l / 2)))
 		return (recursion1((s), l, c + 1));
-	else
-		if (c >= (l / 2))
-			return (1);
-		else
-			return (0);
+	if (c >= (l / 2))
+		return (1);
+	return (0);
 }
 
 
