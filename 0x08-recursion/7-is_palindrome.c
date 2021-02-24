@@ -13,13 +13,13 @@
 
 int recursion1(char *s, int l, int c)
 {
-if ((*(s + c)) == *(s - c + l - 1) && (c < (l / 2)))
-return (recursion1((s), l, c + 1));
-else
-if (c >= (l / 2))
-return (1);
-else
-return (0);
+	if ((*(s + c)) == *(s - c + l - 1) && (c < (l / 2)))
+		return (recursion1((s), l, c + 1));
+	else
+		if (c >= (l / 2))
+			return (1);
+		else
+			return (0);
 }
 
 
@@ -33,6 +33,7 @@ return (0);
 
 int is_palindrome(char *s)
 {
-int l = _strlen_recursion(s);
-return (recursion1(s, l, 0));
+	int l = _strlen_recursion(s);
+
+	return (recursion1(s, l, 0));
 }
