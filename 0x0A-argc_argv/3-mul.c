@@ -1,4 +1,5 @@
-#include<stdio.h>
+#include <stdio.h>
+#include <stdlib.h>
 
 /**
  * main - Entry point
@@ -11,7 +12,7 @@
 
 int main(int argc __attribute__((unused)), char *argv[])
 {
-	int aux = ((argv[1] - '0') * (argv[2]) - '0');
+	int aux = (atoi(argv[1]) * atoi(argv[2]));
 
 	printf("%d\n", aux);
 	return (0);
