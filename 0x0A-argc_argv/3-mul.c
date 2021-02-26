@@ -11,6 +11,8 @@
 
 int main(int argc __attribute__((unused)), char *argv[])
 {
-	printf("%d\n", argv[1] * argv[2]);
+	int aux = (argv[1] * argv[2]) - 48;
+
+	printf("%d\n", aux);
 	return (0);
 }
