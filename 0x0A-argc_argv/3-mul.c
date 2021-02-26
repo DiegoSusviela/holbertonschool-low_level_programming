@@ -10,10 +10,16 @@
  * Return: Always 0 (Success)
  */
 
-int main(int argc __attribute__((unused)), char *argv[])
+int main(int argc (, char *argv[])
 {
-	int aux = (atoi(argv[1]) * atoi(argv[2]));
+	int aux;
 
-	printf("%d\n", aux);
-	return (0);
+	if (argc ==  3)
+	{
+		aux = (atoi(argv[1]) * atoi(argv[2]));
+		printf("%d\n", aux);
+		return (0);
+	}
+	printf("Error");
+	return (1);
 }
