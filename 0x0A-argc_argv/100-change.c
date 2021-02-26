@@ -14,7 +14,7 @@ int main(int argc, char *argv[])
 {
 	int aux = 0, suma = 0, cantidad_monedas = 0;
 
-	if (argc != 1)
+	if (argc != 2)
 	{
 		printf("Error\n");
 		return (1);
@@ -51,9 +51,9 @@ int main(int argc, char *argv[])
 						cantidad_monedas = cantidad_monedas + 1;
 					}
 					else
-						if (suma + 1 = aux)
+						if (suma + 1 <= aux)
 						{
-							suma = suma + 2;
+							suma = suma + 1;
 							cantidad_monedas = cantidad_monedas + 1;
 						}
 	}
