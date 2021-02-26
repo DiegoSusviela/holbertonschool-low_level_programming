@@ -1,0 +1,62 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+/**
+ * main - Entry point
+ * @argc: wopa
+ * @argv: sdkna
+ *
+ * Description: Show a message blablabla
+ * Return: Always 0 (Success)
+ */
+
+int main(int argc, char *argv[])
+{
+	int aux = 0, suma = 0, cantidad_monedas = 0;
+
+	if (argc != 1)
+	{
+		printf("Error\n");
+		return (1);
+	}
+	aux = atoi(argv[1]);
+	if (aux < 0)
+	{
+		printf("0\n");
+		return(0);
+	}
+	while(suma != aux)
+	{
+		if (suma + 25 <= aux)
+		{
+			suma = suma + 25;
+			cantidad_monedas = cantidad_monedas + 1;
+		}
+		else 
+			if (suma + 10 <= aux)
+			{
+				suma = suma + 10;
+				cantidad_monedas = cantidad_monedas + 1;
+			}
+			else
+				if (suma + 5 <= aux)
+				{
+					suma = suma + 5;
+					cantidad_monedas = cantidad_monedas + 1;
+				}
+				else
+					if (suma + 2 <= aux)
+					{
+						suma = suma + 2;
+						cantidad_monedas = cantidad_monedas + 1;
+					}
+					else
+						if (suma + 1 = aux)
+						{
+							suma = suma + 2;
+							cantidad_monedas = cantidad_monedas + 1;
+						}
+	}
+	printf("%d\n", cantidad_monedas);
+	return (0);
+}
