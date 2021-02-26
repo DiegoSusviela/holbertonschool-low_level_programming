@@ -17,7 +17,7 @@ int main(int argc, char *argv[])
 		if (argc[i] >= '0' && argc[i] <= '9')
 		{
 			aux = atoi(argc[i]);
-			suma = argc[i] + suma;
+			suma = aux + suma;
 		}
 		else
 		{
