@@ -26,7 +26,7 @@ int main(int argc, char *argv[])
 			suma = suma + 25;
 			cantidad_monedas = cantidad_monedas + 1;
 		}
-		else if (suma + 10 <= aux)
+		elseif (suma + 10 <= aux)
 			{
 				suma = suma + 10;
 				cantidad_monedas = cantidad_monedas + 1;
