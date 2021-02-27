@@ -12,7 +12,7 @@
 
 int main(int argc, char *argv[])
 {
-	unsigned long int aux = 0, suma = 0, cantidad_monedas = 0;
+	long int aux = 0, suma = 0, cantidad_monedas = 0;
 
 	if (argc != 2)
 	{
@@ -45,6 +45,6 @@ int main(int argc, char *argv[])
 		suma = suma + 1;
 		cantidad_monedas = cantidad_monedas + 1;
 	}
-	printf("%lu\n", cantidad_monedas);
+	printf("%ld\n", cantidad_monedas);
 	return (0);
 }
