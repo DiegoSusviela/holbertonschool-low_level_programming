@@ -14,19 +14,22 @@
 int main(int argc, char *argv[])
 {
 	long aux = 0, suma = 0;
-	int i;
+	int i, j = 0;
 
 	for (i = 1; i < argc; i++)
-		if (isdigit(argv[i]) != 0)
+	{
+		while (argv[i][j])
 		{
-			aux = atoi(argv[i]);
-			suma = aux + suma;
+			if (isdigit(argv[i][j]) == 0)
+			{
+				printf("Error\n");
+				return (1);
+			}
+			j++;
 		}
-		else
-		{
-			printf("Error\n");
-			return (1);
-		}
+		aux = atoi(argv[i]);
+		suma = aux + suma;
+	}
 	printf("%ld\n", suma);
 	return (0);
 }
