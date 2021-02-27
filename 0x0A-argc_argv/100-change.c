@@ -12,46 +12,36 @@
 
 int main(int argc, char *argv[])
 {
-	int aux = 0, suma = 0, cantidad_monedas = 0;
+	int aux = atoi(argv[1]), suma = 0, cantidad_monedas = 0;
 
 	if (argc != 2)
 	{
 		printf("Error\n");
 		return (1);
 	}
-	aux = atoi(argv[1]);
-	if (aux < 0)
-	{
-		printf("0\n");
-		return(0);
-	}
-	while(suma != aux)
+	while (suma < aux)
 	{
 		if (suma + 25 <= aux)
 		{
 			suma = suma + 25;
 			cantidad_monedas = cantidad_monedas + 1;
 		}
-		else 
-			if (suma + 10 <= aux)
+		else if (suma + 10 <= aux)
 			{
 				suma = suma + 10;
 				cantidad_monedas = cantidad_monedas + 1;
 			}
-			else
-				if (suma + 5 <= aux)
+			else if (suma + 5 <= aux)
 				{
 					suma = suma + 5;
 					cantidad_monedas = cantidad_monedas + 1;
 				}
-				else
-					if (suma + 2 <= aux)
+				else if (suma + 2 <= aux)
 					{
 						suma = suma + 2;
 						cantidad_monedas = cantidad_monedas + 1;
 					}
-					else
-						if (suma + 1 <= aux)
+					else if (suma + 1 <= aux)
 						{
 							suma = suma + 1;
 							cantidad_monedas = cantidad_monedas + 1;

@@ -25,6 +25,6 @@ int main(int argc, char *argv[])
 			printf("Error\n");
 			return (1);
 		}
-		printf("%d\n", suma);
-		return (0);
+	printf("%d\n", suma);
+	return (0);
 }
