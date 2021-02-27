@@ -12,7 +12,8 @@
 
 int main(int argc, char *argv[])
 {
-	unsigned int i, aux = 0, suma = 0;
+	unsigned int aux = 0, suma = 0;
+	int i;
 
 	for (i = 1; i < argc; i++)
 		if (*argv[i] >= '0' && *argv[i] <= '9')
