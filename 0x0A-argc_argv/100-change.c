@@ -45,6 +45,6 @@ int main(int argc, char *argv[])
 		suma = suma + 1;
 		cantidad_monedas = cantidad_monedas + 1;
 	}
-	printf("lu\n", cantidad_monedas);
+	printf("%lu\n", cantidad_monedas);
 	return (0);
 }
