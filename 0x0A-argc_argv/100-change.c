@@ -12,7 +12,7 @@
 
 int main(int argc, char *argv[])
 {
-	int aux = 0, suma = 0, cantidad_monedas = 0;
+	unsigned long long int aux = 0, suma = 0, cantidad_monedas = 0
 
 	if (argc != 2)
 	{
