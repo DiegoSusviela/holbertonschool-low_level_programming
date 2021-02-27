@@ -19,19 +19,13 @@ int main(int argc, char *argv[])
 		if (*argv[i] >= '0' && *argv[i] <= '9')
 		{
 			aux = atoi(argv[i]);
-			/*if (aux >= 0)*/
-				suma = aux + suma;
+			suma = aux + suma;
 		}
-			else
-			{
-				printf("Error\n");
-				return (1);
-			}
-		/*else
+		else
 		{
 			printf("Error\n");
 			return (1);
-		}*/
+		}
 	printf("%u\n", suma);
 	return (0);
 }
