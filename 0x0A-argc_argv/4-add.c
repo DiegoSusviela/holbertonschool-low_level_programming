@@ -12,7 +12,7 @@
 
 int main(int argc, char *argv[])
 {
-	int i, aux = 0, suma = 0;
+	unsigned int i, aux = 0, suma = 0;
 
 	for (i = 1; i < argc; i++)
 		if (*argv[i] >= '0' && *argv[i] <= '9')
@@ -31,6 +31,6 @@ int main(int argc, char *argv[])
 			printf("Error\n");
 			return (1);
 		}
-	printf("%d\n", suma);
+	printf("%u\n", suma);
 	return (0);
 }
