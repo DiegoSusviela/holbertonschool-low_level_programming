@@ -19,38 +19,31 @@ int main(int argc, char *argv[])
 		printf("Error\n");
 		return (1);
 	}
-	/*while (suma < aux)
-	{*/
 		while (suma + 25 <= aux)
 		{
 			suma = suma + 25;
 			cantidad_monedas = cantidad_monedas + 1;
 		}
-		//else
 			while (suma + 10 <= aux)
 			{
 				suma = suma + 10;
 				cantidad_monedas = cantidad_monedas + 1;
 			}
-			//else
 				while (suma + 5 <= aux)
 				{
 					suma = suma + 5;
 					cantidad_monedas = cantidad_monedas + 1;
 				}
-				//else
 					while (suma + 2 <= aux)
 					{
 						suma = suma + 2;
 						cantidad_monedas = cantidad_monedas + 1;
 					}
-					//else
 					while (suma + 1 <= aux)
 					{
 						suma = suma + 1;
 						cantidad_monedas = cantidad_monedas + 1;
 					}
-	//}
 	printf("%d\n", cantidad_monedas);
 	return (0);
 }
