@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <ctype.h>
 
 /**
  * main - Entry point
@@ -16,7 +17,7 @@ int main(int argc, char *argv[])
 	int i;
 
 	for (i = 1; i < argc; i++)
-		if (*argv[i] != 0 && atoi(argv[i]) > 0)
+		if (isdigit(argv[i]) != 0)
 		{
 			aux = atoi(argv[i]);
 			suma = aux + suma;
