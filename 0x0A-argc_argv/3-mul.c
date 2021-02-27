@@ -20,6 +20,6 @@ int main(int argc, char *argv[])
 		printf("%d\n", aux);
 		return (0);
 	}
-	printf("Error");
+	printf("Error\n");
 	return (1);
 }
