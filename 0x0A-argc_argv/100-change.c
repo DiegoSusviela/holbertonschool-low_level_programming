@@ -19,7 +19,7 @@ int main(int argc, char *argv[])
 		printf("Error\n");
 		return (1);
 	}
-	aux = atoi(argv[1])
+	aux = atoi(argv[1]);
 	while (suma + 25 <= aux)
 	{
 		suma = suma + 25;
