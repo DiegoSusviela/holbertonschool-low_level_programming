@@ -12,7 +12,7 @@
 
 int main(int argc, char *argv[])
 {
-	int i, aux, suma = 0;
+	int i, aux = 0, suma = 0;
 
 	for (i = 1; i < argc; i++)
 		if (*argv[i] >= '0' && *argv[i] <= '9')
@@ -20,11 +20,11 @@ int main(int argc, char *argv[])
 			aux = atoi(argv[i]);
 			if (aux >= 0)
 				suma = aux + suma;
-			else 
-				{
-					printf("Error\n");
+			else
+			{
+				printf("Error\n");
 				return (1);
-				}
+			}
 		}
 		else
 		{

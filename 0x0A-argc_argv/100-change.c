@@ -26,22 +26,26 @@ int main(int argc, char *argv[])
 			suma = suma + 25;
 			cantidad_monedas = cantidad_monedas + 1;
 		}
-		elseif (suma + 10 <= aux)
+		else
+			if (suma + 10 <= aux)
 			{
 				suma = suma + 10;
 				cantidad_monedas = cantidad_monedas + 1;
 			}
-			else if (suma + 5 <= aux)
+			else
+				if (suma + 5 <= aux)
 				{
 					suma = suma + 5;
 					cantidad_monedas = cantidad_monedas + 1;
 				}
-				else if (suma + 2 <= aux)
+				else
+					if (suma + 2 <= aux)
 					{
 						suma = suma + 2;
 						cantidad_monedas = cantidad_monedas + 1;
 					}
-					else if (suma + 1 <= aux)
+					else
+						if (suma + 1 <= aux)
 						{
 							suma = suma + 1;
 							cantidad_monedas = cantidad_monedas + 1;
