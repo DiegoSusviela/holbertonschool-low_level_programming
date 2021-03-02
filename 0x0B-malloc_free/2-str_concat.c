@@ -12,7 +12,7 @@
 
 char *str_concat(char *s1, char *s2)
 {
-	unsigned int larg1 = 0, larg2 = 0, larg3, cont;
+	unsigned int larg1 = 0, larg2 = 0, larg3, cont = 0;
 	char *aux;
 
 	while (s1[larg1])
@@ -23,10 +23,16 @@ char *str_concat(char *s1, char *s2)
 	aux = malloc(larg3 * sizeof(char));
 	if (!aux)
 		return (NULL);
-	for (cont = 0; cont < larg1; cont++)
+	while (cont < larg1)
+	{
 		aux[cont] = s1[cont];
-	for (cont = 0; cont < larg2; cont++)
-		aux[cont + larg1] = s2[cont];
+		cont++;
+	}
+	while (cont < larg3)
+	{
+		aux[cont] = s2[cont - larg1];
+		cont++;
+	}
 	aux[larg3 - 1] = '\0';
 	return (aux);
 }
