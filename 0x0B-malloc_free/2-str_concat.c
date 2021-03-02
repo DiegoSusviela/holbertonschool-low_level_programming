@@ -14,6 +14,7 @@ char *str_concat(char *s1, char *s2)
 {
 	unsigned int larg1 = 0, larg2 = 0, larg3, cont = 0;
 	char *aux;
+	
 	if (!s1)
 		s1 = "";
 	while (s1[larg1])
