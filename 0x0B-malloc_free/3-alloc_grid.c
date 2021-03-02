@@ -2,9 +2,9 @@
 #include <stdlib.h>
 
 /**
- * str_concat - Entry point
- * @s1: wopa
- * @s2: ea
+ * alloc_grid - Entry point
+ * @width: wopa
+ * @height: ea
  *
  * Description: Show aux message blablabla
  * Return: Always 0 (Success)
