@@ -15,11 +15,11 @@ char *str_concat(char *s1, char *s2)
 	unsigned int larg1 = 0, larg2 = 0, larg3, cont = 0;
 	char *aux;
 	if (!s1)
-		s1 = '';
+		s1 = "";
 	while (s1[larg1])
 		larg1++;
 	if (!s2)
-		s2 = '';
+		s2 = "";
 	while (s2[larg2])
 		larg2++;
 	larg3 = larg1 + larg2 + 1;
