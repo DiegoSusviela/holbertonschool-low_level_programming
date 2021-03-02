@@ -12,7 +12,7 @@
 
 int main(int argc, char *argv[])
 {
-	int aux = 0, suma = 0, cantidad_monedas = 0;
+	long int aux = 0, suma = 0, cantidad_monedas = 0;
 
 	if (argc != 2)
 	{
@@ -20,43 +20,31 @@ int main(int argc, char *argv[])
 		return (1);
 	}
 	aux = atoi(argv[1]);
-	if (aux < 0)
+	while (suma + 25 <= aux)
 	{
-		printf("0\n");
-		return(0);
+		suma = suma + 25;
+		cantidad_monedas = cantidad_monedas + 1;
 	}
-	while(suma != aux)
+	while (suma + 10 <= aux)
 	{
-		if (suma + 25 <= aux)
-		{
-			suma = suma + 25;
-			cantidad_monedas = cantidad_monedas + 1;
-		}
-		else 
-			if (suma + 10 <= aux)
-			{
-				suma = suma + 10;
-				cantidad_monedas = cantidad_monedas + 1;
-			}
-			else
-				if (suma + 5 <= aux)
-				{
-					suma = suma + 5;
-					cantidad_monedas = cantidad_monedas + 1;
-				}
-				else
-					if (suma + 2 <= aux)
-					{
-						suma = suma + 2;
-						cantidad_monedas = cantidad_monedas + 1;
-					}
-					else
-						if (suma + 1 <= aux)
-						{
-							suma = suma + 1;
-							cantidad_monedas = cantidad_monedas + 1;
-						}
+		suma = suma + 10;
+		cantidad_monedas = cantidad_monedas + 1;
 	}
-	printf("%d\n", cantidad_monedas);
+	while (suma + 5 <= aux)
+	{
+		suma = suma + 5;
+		cantidad_monedas = cantidad_monedas + 1;
+	}
+	while (suma + 2 <= aux)
+	{
+		suma = suma + 2;
+		cantidad_monedas = cantidad_monedas + 1;
+	}
+	while (suma + 1 <= aux)
+	{
+		suma = suma + 1;
+		cantidad_monedas = cantidad_monedas + 1;
+	}
+	printf("%ld\n", cantidad_monedas);
 	return (0);
 }
