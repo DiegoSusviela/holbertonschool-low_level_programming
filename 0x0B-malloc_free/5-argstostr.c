@@ -34,7 +34,7 @@ char *argstostr(int ac, char **av)
 			aux[largo_aux] = av[pos1_arg][let_arg];
 			largo_aux++;
 		}
-		aux[largo_aux] = '\cont';
+		aux[largo_aux] = '\n';
 		largo_aux++;
 	}
 	aux[largo_aux] = '\0';
