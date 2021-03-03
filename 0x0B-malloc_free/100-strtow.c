@@ -23,6 +23,7 @@ char *current_word(char *str)
 		dest[pos2] = str[pos2];
 	}
 	dest[cant] = '\0';
+	str += cant + 1;
 	return (dest);
 }
 
