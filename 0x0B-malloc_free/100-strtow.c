@@ -11,7 +11,7 @@ int word_count(char *s)
 {
 	int pos_str = 0, amount_words = 0;
 
-	while(s[pos_str])
+	while (s[pos_str])
 	{
 		if (s[pos_str] == ' ')
 		{
