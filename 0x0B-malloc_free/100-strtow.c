@@ -34,7 +34,7 @@ int word_count(char *s)
 
 char **strtow(char *str)
 {
-	int pos_str = 0, word_size, aux_free, word_lenght, amount_words = 0, dest_pos = 0;
+	int pos_str = 0, word_size, aux_free, word_lenght, amount_words, dest_pos = 0;
 	char **dest;
 
 	if (!str || !(*str))
