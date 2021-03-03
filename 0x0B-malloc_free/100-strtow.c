@@ -66,9 +66,9 @@ int word_count(char *str)
 char **strtow(char *str)
 {
 	char **dest;
-	int amount_words, word_col, word_lenght, word_fil;
+	int amount_words, word_col, word_fil;
 
-	if ((!str) || (*str == '\0'));
+	if ((!str) || (*str == '\0'))
 		return (NULL);
 	amount_words = word_count(str);
 	if (amount_words == 1)
