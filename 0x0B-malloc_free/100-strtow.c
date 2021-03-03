@@ -2,100 +2,74 @@
 #include <stdlib.h>
 
 /**
- * strtow - Entry point
- * @strtow: wopa
+ * word_count - asedege
+ * @s: o chess
  *
- * Description: Show aux message blablabla
- * Return: Always 0 (Success)
+ * Return: int of number of words
  */
-char *current_word(char *str)
+int word_count(char *s)
 {
-	unsigned int cant = 0, pos2;
-	char *dest;
+	int pos_str, amount_words = 0;
 
-	while (str[cant] != ' ')
-		cant++;
-	dest = malloc((cant + 1) * sizeof(char));
-	if (!dest)
-		return (NULL);
-	for (pos2 = 0; pos2 < cant; pos2++)
+	for (pos_str = 0; s[pos_str]; pos_str++)
 	{
-		dest[pos2] = str[pos2];
-	}
-	dest[cant] = '\0';
-	str += cant + 1;
-	return (dest);
-}
-
-
-int _strlen(char *s)
-{
-	int marker = 0;
-
-	while (*(s + marker))
-		marker++;
-	return (marker);
-}
-
-/*
-char *current_word(char *str)
-{
-	while (*str != " ")
-		str++;
-	return (str + 1);
-}*/
-
-int word_count(char *str)
-{
-	int pos, count = 0;
-
-	for (pos = 0; str[pos]; pos++)
-	{
-		if (str[pos] == ' ')
+		if (s[pos_str] == ' ')
 		{
-			if ((str[pos + 1] != ' ') && (str[pos + 1] != '\0'))
-				count++;
+			if (s[pos_str + 1] != ' ' && s[pos_str + 1] != '\0')
+				amount_words++;
 		}
-		else 
-			if (pos == 0)
-				count++;
+		else if (pos_str == 0)
+			amount_words++;
 	}
-	pos++;
-	return (count);
+	amount_words++;
+	return (amount_words);
 }
+
+/**
+ * strtow - swoooopoa
+ * @str: eas
+ *
+ * Return: pointer to an array of strings
+ */
 
 char **strtow(char *str)
 {
+	int pos_str = 0, amount_words, aux_free, word_lenght, amount_words = 0, dest_pos = 0;
 	char **dest;
-	int amount_words, word_col, word_fil;
 
-	if ((!str) || (*str == '\0'))
+	if (!str || !(*str))
 		return (NULL);
 	amount_words = word_count(str);
 	if (amount_words == 1)
 		return (NULL);
-	dest = malloc(sizeof(char *) * amount_words);
+	dest = (char **)malloc(amount_words * sizeof(char *));
 	if (!dest)
 		return (NULL);
 	dest[amount_words - 1] = NULL;
-	for (word_fil = 0; word_fil < amount_words; word_fil++)
+	while (str[pos_str])
 	{
-		/*
-		word_lenght = _strlen(current_word(str));
-		dest[word_fil] = malloc(sizeof(char) * word_lenght);
-		*/
-		dest[word_fil] = current_word(str);
-		if (!dest[word_fil])
+		if (str[pos_str] != ' ' && (pos_str == 0 || str[pos_str - 1] == ' '))
+		{
+			amount_words = 1;
+			while (str[pos_str + amount_words] != ' ' && str[pos_str + amount_words])
+				amount_words++;
+			dest[dest_pos] = (char *)malloc((amount_words + 1) * sizeof(char));
+			if (dest[dest_pos] == NULL)
 			{
-				for (word_col = 0; word_col < word_fil; word_col++)
-					free(dest[word_col]);
+				for (aux_free = 0; aux_free < dest_pos; aux_free++)
+					free(dest[aux_free]);
+				free(dest[amount_words - 1]);
 				free(dest);
 				return (NULL);
 			}
-		/*
-		for (word_col = 0; word_col < word_lenght; word_col++)
-			dest[word_col][word_fil] = current_word(str);
-		*/
+			for (word_lenght = 0; word_lenght < amount_words; word_lenght++)
+				dest[dest_pos][word_lenght] = str[pos_str + word_lenght];
+			dest[dest_pos][word_lenght] = '\0';
+			dest_pos++;
+			pos_str += amount_words;
+		}
+		else
+			pos_str++;
 	}
 	return (dest);
 }
