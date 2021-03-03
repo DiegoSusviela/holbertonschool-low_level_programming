@@ -13,7 +13,7 @@ char *current_word(char *str)
 	unsigned int cant = 0, pos2;
 	char *dest;
 
-	while (str[cant] != " ")
+	while (str[cant] != ' ')
 		cant++;
 	dest = malloc((cant + 1) * sizeof(char));
 	if (!dest)
