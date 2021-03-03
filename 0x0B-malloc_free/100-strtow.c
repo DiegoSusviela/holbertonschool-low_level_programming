@@ -9,17 +9,19 @@
  */
 int word_count(char *s)
 {
-	int pos_str, amount_words = 0;
+	int pos_str = 0, amount_words = 0;
 
-	for (pos_str = 0; s[pos_str]; pos_str++)
+	while(s[pos_str])
 	{
 		if (s[pos_str] == ' ')
 		{
 			if (s[pos_str + 1] != ' ' && s[pos_str + 1] != '\0')
 				amount_words++;
 		}
-		else if (pos_str == 0)
-			amount_words++;
+		else
+			if (pos_str == 0)
+				amount_words++;
+		pos_str++;
 	}
 	amount_words++;
 	return (amount_words);
