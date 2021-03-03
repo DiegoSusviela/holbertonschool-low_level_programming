@@ -34,7 +34,7 @@ int word_count(char *s)
 
 char **strtow(char *str)
 {
-	int pos_str = 0, amount_words, aux_free, word_lenght, amount_words = 0, dest_pos = 0;
+	int pos_str = 0, word_size, aux_free, word_lenght, amount_words = 0, dest_pos = 0;
 	char **dest;
 
 	if (!str || !(*str))
@@ -50,10 +50,10 @@ char **strtow(char *str)
 	{
 		if (str[pos_str] != ' ' && (pos_str == 0 || str[pos_str - 1] == ' '))
 		{
-			amount_words = 1;
-			while (str[pos_str + amount_words] != ' ' && str[pos_str + amount_words])
-				amount_words++;
-			dest[dest_pos] = (char *)malloc((amount_words + 1) * sizeof(char));
+			word_size = 1;
+			while (str[pos_str + word_size] != ' ' && str[pos_str + word_size])
+				word_size++;
+			dest[dest_pos] = (char *)malloc((word_size + 1) * sizeof(char));
 			if (dest[dest_pos] == NULL)
 			{
 				for (aux_free = 0; aux_free < dest_pos; aux_free++)
@@ -62,11 +62,11 @@ char **strtow(char *str)
 				free(dest);
 				return (NULL);
 			}
-			for (word_lenght = 0; word_lenght < amount_words; word_lenght++)
+			for (word_lenght = 0; word_lenght < word_size; word_lenght++)
 				dest[dest_pos][word_lenght] = str[pos_str + word_lenght];
 			dest[dest_pos][word_lenght] = '\0';
 			dest_pos++;
-			pos_str += amount_words;
+			pos_str += word_size;
 		}
 		else
 			pos_str++;
