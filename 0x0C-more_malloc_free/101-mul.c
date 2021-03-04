@@ -75,7 +75,7 @@ int lenght_B10(char *argv[], int row)
 
 	for (col = 0; argv[row][col]; col++)
 		if (!isdigit(argv[row][col]))
-			exit_on_error;
+			exit_on_error();
 	return (col);
 }
 
@@ -93,11 +93,11 @@ int main(int argc, char *argv[])
 	char *nout;
 
 	if (argc != 3)
-		exit_on_error;
+		exit_on_error();
 	n1_l = lenght_B10(argv, 1), n2_l = lenght_B10(argv, 2), lnout = n1_l + n2_l;
 	check_any_0(argv), nout = malloc(lnout + 1);
 	if (!nout)
-		exit_on_error;
+		exit_on_error();
 	nout = init_ar(nout, lnout);
 	k = lnout - 1, i = n1_l - 1, j = n2_l - 1, ca = addl = 0;
 	for (; k >= 0; k--, i--)
