@@ -4,6 +4,19 @@
 #include <ctype.h>
 
 /**
+ * exit_on_error - Entry point.
+ * program that multiplies two positive numbers.
+ *
+ * Return: 0 - success.
+ */
+
+void exit_on_error(void)
+{
+	printf("Error\n");
+	exit(98);
+}
+
+/**
  * check_any_0 - determines if any number is zero
  * @argv: argument vector.
  *
@@ -28,10 +41,7 @@ void check_any_0(char *argv[])
 		}
 
 	if (isn1 == 1 || isn2 == 1)
-	{
-		printf("0\n");
-		exit(0);
-	}
+		exit_on_error;
 }
 
 /**
@@ -65,11 +75,7 @@ int lenght_B10(char *argv[], int row)
 
 	for (col = 0; argv[row][col]; col++)
 		if (!isdigit(argv[row][col]))
-		{
-			printf("Error\n");
-			exit(98);
-		}
-
+			exit_on_error;
 	return (col);
 }
 
@@ -87,22 +93,19 @@ int main(int argc, char *argv[])
 	char *nout;
 
 	if (argc != 3)
-	{
-		printf("Error\n");
-		exit(98);
-	}
+		exit_on_error;
 	numer1_length = lenght_B10(argv, 1);
 	number2_length = lenght_B10(argv, 2);
 	check_any_0(argv);
 	lnout = numer1_length + number2_length;
 	nout = malloc(lnout + 1);
 	if (!nout)
-	{
-		printf("Error\n");
-		exit(98);
-	}
+		exit_on_error;
 	nout = init_ar(nout, lnout);
-	k = lnout - 1, i = numer1_length - 1, j = number2_length - 1, ca = addl = 0;
+	k = lnout - 1;
+	i = numer1_length - 1;
+	j = number2_length - 1;
+	ca = addl = 0;
 	for (; k >= 0; k--, i--)
 	{
 		if (i < 0)
