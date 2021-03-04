@@ -17,11 +17,11 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	char *str_concat;
 
 	pos_s1 = 0;
-	if (!s1)
+	if (s1)
 		while (s1[pos_s1])
 			pos_s1++,
 	pos_s2 = 0;
-	if (!s2)
+	if (s2)
 		while (s2[pos_s2])
 			pos_s2++;
 	if (pos_s2 > n)
