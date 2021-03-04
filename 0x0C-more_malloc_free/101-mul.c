@@ -4,19 +4,6 @@
 #include <ctype.h>
 
 /**
- * exit_on_error - Entry point.
- * program that multiplies two positive numbers.
- *
- * Return: 0 - success.
- */
-
-void exit_on_error(void)
-{
-	printf("Error\n");
-	exit(98);
-}
-
-/**
  * check_any_0 - determines if any number is zero
  * @argv: argument vector.
  *
@@ -41,7 +28,7 @@ void check_any_0(char *argv[])
 		}
 
 	if (isn1 == 1 || isn2 == 1)
-		exit_on_error();
+		printf("Error\n"), exit(98);
 }
 
 /**
@@ -75,7 +62,7 @@ int lenght_B10(char *argv[], int row)
 
 	for (col = 0; argv[row][col]; col++)
 		if (!isdigit(argv[row][col]))
-			exit_on_error();
+			printf("Error\n"), exit(98);
 	return (col);
 }
 
@@ -93,11 +80,11 @@ int main(int argc, char *argv[])
 	char *nout;
 
 	if (argc != 3)
-		exit_on_error();
+		printf("Error\n"), exit(98);
 	n1_l = lenght_B10(argv, 1), n2_l = lenght_B10(argv, 2), lnout = n1_l + n2_l;
 	check_any_0(argv), nout = malloc(lnout + 1);
 	if (!nout)
-		exit_on_error();
+		printf("Error\n"), exit(98);
 	nout = init_ar(nout, lnout);
 	k = lnout - 1, i = n1_l - 1, j = n2_l - 1, ca = addl = 0;
 	for (; k >= 0; k--, i--)
