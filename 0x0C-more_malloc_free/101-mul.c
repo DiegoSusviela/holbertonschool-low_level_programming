@@ -94,9 +94,8 @@ int main(int argc, char *argv[])
 
 	if (argc != 3)
 		exit_on_error;
-	numer1_length = lenght_B10(argv, 1), number2_length = lenght_B10(argv, 2);
-	lnout = numer1_length + number2_length, check_any_0(argv);
-	nout = malloc(lnout + 1);
+	numer1_length = lenght_B10(argv, 1), number2_length = lenght_B10(argv, 2), lnout = numer1_length + number2_length;
+	check_any_0(argv), nout = malloc(lnout + 1);
 	if (!nout)
 		exit_on_error;
 	nout = init_ar(nout, lnout);
