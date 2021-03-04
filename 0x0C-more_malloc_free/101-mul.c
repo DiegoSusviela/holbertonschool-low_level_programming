@@ -11,23 +11,23 @@
  */
 void check_any_0(char *argv[])
 {
-	int i, isn1 = 1, isn2 = 1;
+	int i, flag = 1, flag2 = 1;
 
 	for (i = 0; argv[1][i]; i++)
 		if (argv[1][i] != '0')
 		{
-			isn1 = 0;
+			flag = 0;
 			break;
 		}
 
 	for (i = 0; argv[2][i]; i++)
 		if (argv[2][i] != '0')
 		{
-			isn2 = 0;
+			flag2 = 0;
 			break;
 		}
 
-	if (isn1 == 1 || isn2 == 1)
+	if (flag == 1 || flag2 == 1)
 		printf("Error\n"), exit(98);
 }
 
@@ -81,8 +81,8 @@ int main(int argc, char *argv[])
 
 	if (argc != 3)
 		printf("Error\n"), exit(98);
-	n1_l = lenght_B10(argv, 1), n2_l = lenght_B10(argv, 2), lnout = n1_l + n2_l;
-	check_any_0(argv), nout = malloc(lnout + 1);
+	n1_l = lenght_B10(argv, 1), n2_l = lenght_B10(argv, 2);
+	check_any_0(argv), lnout = n1_l + n2_l, nout = malloc(lnout + 1);
 	if (!nout)
 		printf("Error\n"), exit(98);
 	nout = init_ar(nout, lnout);
