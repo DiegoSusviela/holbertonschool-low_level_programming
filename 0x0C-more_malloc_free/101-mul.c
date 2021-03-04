@@ -94,18 +94,13 @@ int main(int argc, char *argv[])
 
 	if (argc != 3)
 		exit_on_error;
-	numer1_length = lenght_B10(argv, 1);
-	number2_length = lenght_B10(argv, 2);
-	check_any_0(argv);
-	lnout = numer1_length + number2_length;
+	numer1_length = lenght_B10(argv, 1), number2_length = lenght_B10(argv, 2);
+	lnout = numer1_length + number2_length, check_any_0(argv);
 	nout = malloc(lnout + 1);
 	if (!nout)
 		exit_on_error;
 	nout = init_ar(nout, lnout);
-	k = lnout - 1;
-	i = numer1_length - 1;
-	j = number2_length - 1;
-	ca = addl = 0;
+	k = lnout - 1, i = numer1_length - 1, j = number2_length - 1, ca = addl = 0;
 	for (; k >= 0; k--, i--)
 	{
 		if (i < 0)
