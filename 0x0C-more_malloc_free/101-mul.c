@@ -41,7 +41,7 @@ void check_any_0(char *argv[])
 		}
 
 	if (isn1 == 1 || isn2 == 1)
-		exit_on_error;
+		exit_on_error();
 }
 
 /**
