@@ -89,17 +89,17 @@ int lenght_B10(char *argv[], int row)
  */
 int main(int argc, char *argv[])
 {
-	int numer1_length, number2_length, lnout, add, addl, i, j, k, ca;
+	int n1_l, n2_l, lnout, add, addl, i, j, k, ca;
 	char *nout;
 
 	if (argc != 3)
 		exit_on_error;
-	numer1_length = lenght_B10(argv, 1), number2_length = lenght_B10(argv, 2), lnout = numer1_length + number2_length;
+	n1_l = lenght_B10(argv, 1), n2_l = lenght_B10(argv, 2), lnout = n1_l + n2_l;
 	check_any_0(argv), nout = malloc(lnout + 1);
 	if (!nout)
 		exit_on_error;
 	nout = init_ar(nout, lnout);
-	k = lnout - 1, i = numer1_length - 1, j = number2_length - 1, ca = addl = 0;
+	k = lnout - 1, i = n1_l - 1, j = n2_l - 1, ca = addl = 0;
 	for (; k >= 0; k--, i--)
 	{
 		if (i < 0)
@@ -111,7 +111,7 @@ int main(int argc, char *argv[])
 					nout[k - 1] = (add / 10) + '0';
 				nout[k] = (add % 10) + '0';
 			}
-			i = numer1_length - 1, j--, addl = 0, ca++, k = lnout - (1 + ca);
+			i = n1_l - 1, j--, addl = 0, ca++, k = lnout - (1 + ca);
 		}
 		if (j < 0)
 		{
@@ -119,7 +119,7 @@ int main(int argc, char *argv[])
 				break;
 			lnout--;
 			free(nout), nout = malloc(lnout + 1), nout = init_ar(nout, lnout);
-			k = lnout - 1, i = numer1_length - 1, j = number2_length - 1, ca = addl = 0;
+			k = lnout - 1, i = n1_l - 1, j = n2_l - 1, ca = addl = 0;
 		}
 		if (j >= 0)
 		{
