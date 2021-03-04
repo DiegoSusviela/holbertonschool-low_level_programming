@@ -19,7 +19,7 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	pos_s1 = 0;
 	if (s1)
 		while (s1[pos_s1])
-			pos_s1++,
+			pos_s1++;
 	pos_s2 = 0;
 	if (s2)
 		while (s2[pos_s2])
