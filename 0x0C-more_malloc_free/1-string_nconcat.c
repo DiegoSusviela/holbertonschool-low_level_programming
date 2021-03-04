@@ -2,7 +2,7 @@
 #include <stdlib.h>
 
 /**
- * malloc_checked - Entry point
+ * string_nconcat - Entry point
  * @n: sdkna
  * @s1: ea
  * @s2: aeae
