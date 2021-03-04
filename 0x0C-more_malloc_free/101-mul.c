@@ -4,6 +4,19 @@
 #include <ctype.h>
 
 /**
+ * exit_on_error - Entry point.
+ * program that multiplies two positive numbers.
+ *
+ * Return: 0 - success.
+ */
+
+void exit_on_error(void)
+{
+	printf("Error\n");
+	exit(98);
+}
+
+/**
  * check_any_0 - determines if any number is zero
  * @argv: argument vector.
  *
@@ -11,24 +24,27 @@
  */
 void check_any_0(char *argv[])
 {
-	int i, flag = 1, flag2 = 1;
+	int i, isn1 = 1, isn2 = 1;
 
 	for (i = 0; argv[1][i]; i++)
 		if (argv[1][i] != '0')
 		{
-			flag = 0;
+			isn1 = 0;
 			break;
 		}
 
 	for (i = 0; argv[2][i]; i++)
 		if (argv[2][i] != '0')
 		{
-			flag2 = 0;
+			isn2 = 0;
 			break;
 		}
 
-	if (flag == 1 || flag2 == 1)
-		printf("Error\n"), exit(98);
+	if (isn1 == 1 || isn2 == 1)
+	{
+		printf("0\n");
+		exit(0);
+	}
 }
 
 /**
@@ -62,7 +78,7 @@ int lenght_B10(char *argv[], int row)
 
 	for (col = 0; argv[row][col]; col++)
 		if (!isdigit(argv[row][col]))
-			printf("Error\n"), exit(98);
+			exit_on_error();
 	return (col);
 }
 
@@ -80,11 +96,11 @@ int main(int argc, char *argv[])
 	char *nout;
 
 	if (argc != 3)
-		printf("Error\n"), exit(98);
-	n1_l = lenght_B10(argv, 1), n2_l = lenght_B10(argv, 2);
-	check_any_0(argv), lnout = n1_l + n2_l, nout = malloc(lnout + 1);
+		exit_on_error();
+	n1_l = lenght_B10(argv, 1), n2_l = lenght_B10(argv, 2), lnout = n1_l + n2_l;
+	check_any_0(argv), nout = malloc(lnout + 1);
 	if (!nout)
-		printf("Error\n"), exit(98);
+		exit_on_error();
 	nout = init_ar(nout, lnout);
 	k = lnout - 1, i = n1_l - 1, j = n2_l - 1, ca = addl = 0;
 	for (; k >= 0; k--, i--)
