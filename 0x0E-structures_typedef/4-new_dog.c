@@ -35,7 +35,8 @@ char *_strdup(char *str)
 dog_t *new_dog(char *name, float age, char *owner)
 {
 	dog_t *dog;
-	char name_copy, owner_copy;
+	/*char name_copy, owner_copy;
+	**/
 
 	if (!name || !owner)
 		return (NULL);
