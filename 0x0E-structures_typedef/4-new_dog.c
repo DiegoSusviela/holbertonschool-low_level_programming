@@ -2,6 +2,14 @@
 #include <stdlib.h>
 #include "dog.h"
 
+/**
+ * _strdup - Entry point
+ * @str: wopa
+ *
+ * Description: Show a message blablabla
+ * Return: Always 0 (Success)
+ */
+
 char *_strdup(char *str)
 {
 	unsigned int cant = 0, pos2;
@@ -14,7 +22,7 @@ char *_strdup(char *str)
 	cant++;
 	dest = malloc(cant * sizeof(char));
 	if (!dest)
-		return (NULL);
+		exit (NULL);
 	for (pos2 = 0; pos2 < cant; pos2++)
 	{
 		dest[pos2] = str[pos2];
@@ -35,7 +43,8 @@ char *_strdup(char *str)
 dog_t *new_dog(char *name, float age, char *owner)
 {
 	dog_t *dog;
-	/*char name_copy, owner_copy;
+	/*
+	*char name_copy, owner_copy;
 	**/
 
 	if (!name || !owner)
@@ -44,7 +53,8 @@ dog_t *new_dog(char *name, float age, char *owner)
 	dog = malloc(sizeof(dog_t));
 	if (!dog)
 		return (NULL);
-	/*name_copy = name;
+	/*
+	*name_copy = name;
 	*owner_copy = owner;
 	**/
 	dog->age = age;
