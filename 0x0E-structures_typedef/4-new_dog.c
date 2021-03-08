@@ -22,7 +22,7 @@ char *_strdup(char *str)
 	cant++;
 	dest = malloc(cant * sizeof(char));
 	if (!dest)
-		exit(NULL);
+		return(NULL);
 	for (pos2 = 0; pos2 < cant; pos2++)
 	{
 		dest[pos2] = str[pos2];
@@ -64,5 +64,7 @@ dog_t *new_dog(char *name, float age, char *owner)
 	**/
 	dog->name = _strdup(name);
 	dog->owner = _strdup(owner);
+	if (!dog->name || !dog->owner)
+		return (NULL);
 	return (dog);
 }
