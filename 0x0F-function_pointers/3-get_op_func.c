@@ -25,7 +25,7 @@ int (*get_op_func(char *s))(int, int)
 
 	while (ops[i].op)
 	{
-		if (stcmp (s, ops[i].op == 0))
+		if (stcmp(s, ops[i].op) == 0)
 			break;
 		i++;
 	}
