@@ -31,7 +31,7 @@ int main(int argc, char *argv[])
 		exit(99);
 	}
 
-	result = operator (num_1, num_2);
+	result = operator(num_1, num_2);
 	printf("%d\n", result);
 	return (0);
 }

@@ -1,7 +1,7 @@
 #include "function_pointers.h"
 
 /**
- * array_iterator - prints name
+ * int_index - prints name
  * @array: array of elements
  * @size: size of array
  * @cmp: function of action
