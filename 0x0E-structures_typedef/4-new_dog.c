@@ -43,9 +43,6 @@ char *_strdup(char *str)
 dog_t *new_dog(char *name, float age, char *owner)
 {
 	dog_t *dog;
-	/*
-	*char name_copy, owner_copy;
-	**/
 
 	if (!name || !owner)
 		return (NULL);
@@ -53,15 +50,9 @@ dog_t *new_dog(char *name, float age, char *owner)
 	dog = malloc(sizeof(dog_t));
 	if (!dog)
 		return (NULL);
-	/*
-	*name_copy = name;
-	*owner_copy = owner;
-	**/
+
 	dog->age = age;
-	/*
-	*dog->name = malloc(name_copy * (sizeof(char)));
-	*dog->owner = malloc(owner_copy * (sizeof(char)));
-	**/
+
 	dog->name = _strdup(name);
 	dog->owner = _strdup(owner);
 	if (!dog->name || !dog->owner)
