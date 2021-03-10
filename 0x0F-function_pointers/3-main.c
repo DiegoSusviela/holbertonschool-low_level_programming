@@ -10,7 +10,7 @@
  * Return: no return in void
  */
 
-int main(int argc, char *argv)
+int main(int argc, char *argv[])
 {
 	int num_1, num_2, result;
 
