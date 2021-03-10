@@ -1,6 +1,5 @@
 #include "function_pointers.h"
 #include "3-calc.h"
-#define ABS(x) ((x) < 0 ? (-(x)) : (x))
 
 /**
  * op_add - prints name
@@ -27,7 +26,7 @@ int op_add(int a, int b)
 
 int op_sub(int a, int b)
 {
-	return (ABS(a - b));
+	return (a - b);
 }
 
 /**
