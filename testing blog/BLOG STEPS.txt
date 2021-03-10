@@ -1,0 +1,27 @@
+First of all we need to change all the defines! easy way to do this is run the preprocesor of this code with gcc and the -E flag
+Then we are going to tidy up the code to make it more legible, changing the parentesis for our loops if conditions and functions. 
+Now we remove all the # at the start, so as to remove pre procesor notes.
+Changing variable names to make it more visible:
+-WE can see _DIT is only used for storing a value that is not from input or output, this sounds like a buffer, so ill set an appropiate name: aux
+-Then we see that DAH_ is assigned in the first for to the first bit of our aux, so it sounds like a pointer to use with out aux: p_aux
+-Name of the array given to compare will be start_value
+-And _DIT_ is a pinter used to move int this array so p_start_value will be our new name
+
+i checked 233 bitwise, and the bits that make up 223 are 11011111
+the bits of a are 01100001
+the bits of z are 01111010
+capital letters in ascii are 32 lower than lower case numbers
+
+so in this part of the code we convert everything to uppercase, so we only compare letters in uppercase, making the conversion in sensitive to upper and lower case.
+
+if any letter matches the key, even if its upper or lower, the 3 for will exit at the first match starting from the left
+
+_DAH -> converts the char passed to the . or _ that corresponds. So its now called conv_2_morse
+
+-__DIT -> function that prints
+
+(*p_aux >='a' ? *p_aux & 223 : *p_aux) -> esto transforma a caps las letras
+
+-DIT_ -> stores the value of the letter capitalized
+
+code prints in morse code the string given
