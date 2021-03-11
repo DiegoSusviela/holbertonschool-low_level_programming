@@ -53,7 +53,7 @@ void print_char_2(va_list list)
 
 	s_aux = va_arg(list, char*);
 	if (!s_aux)
-	{	
+	{
 		printf("(nil)");
 		return;
 	}
