@@ -27,7 +27,7 @@ void print_char_2(va_list list)
 {
 	char *s_aux;
 	
-	s_aux = va_arg(list, int);
+	s_aux = va_arg(list, char*);
 	if (s_aux)
 		printf("%s", s_aux);
 	else
