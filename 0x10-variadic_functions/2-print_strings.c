@@ -2,7 +2,7 @@
 #include <stdarg.h>
 
 /**
- * print_numbers - imprime
+ * print_strings - imprime
  * @separator: numero a imprimir
  * @n: some number idk tbf
  *
@@ -19,7 +19,7 @@ void print_strings(const char *separator, const unsigned int n, ...)
 	va_start(ap, n);
 	for (aux = 0; aux < n; aux++)
 	{
-		str = va_arg(ap, char);
+		str = va_arg(ap, char *);
 		if (separator && aux != n - 1)
 		{
 			if (str)
