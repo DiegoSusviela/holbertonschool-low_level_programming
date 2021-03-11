@@ -1,4 +1,4 @@
-        .file   "helo_hol.c"
+        .file   "more_testing_advanced.c"
         .section        .rodata
 .LC0:
         .string "Hello, Holberton"
@@ -13,17 +13,9 @@ main:
         .cfi_offset 6, -16
         movq    %rsp, %rbp
         .cfi_def_cfa_register 6
-        subq    $16, %rsp
-        movq    $.LC0, -8(%rbp)
-        movq    -8(%rbp), %rax
-        movq    %rax, %rdi
-        call    strlen
-        movq    %rax, %rdx
-        movq    -8(%rbp), %rax
-        movq    %rax, %rsi
-        movl    $1, %edi
-        call    write
-        leave
+        movl    $.LC0, %edi
+        call    puts
+        popq    %rbp
         .cfi_def_cfa 7, 8
         ret
         .cfi_endproc
