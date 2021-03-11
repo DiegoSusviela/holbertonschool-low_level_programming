@@ -15,7 +15,7 @@ void print_char(va_list list)
 
 /**
  * print_int - imprime
- * @list: numero a imprimir
+ * @list: lista a pasar
  *
 * Description: Show a message blablabla
 * Return: Always 0 (Success)
