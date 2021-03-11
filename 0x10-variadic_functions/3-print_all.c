@@ -71,7 +71,7 @@ void print_char_2(va_list list)
 
 void print_all(const char * const format, ...)
 {
-	data_t tu_vieja[] = {
+	data_t type[] = {
 		{"c", print_char},
 		{"i", print_int},
 		{"f", print_float},
@@ -79,26 +79,26 @@ void print_all(const char * const format, ...)
 		{NULL, NULL},
 	};
 
-	int index_tuvieja, iterador = 0;
+	int indx_type, iter = 0;
 	va_list list;
 	char *separator = "";
-	
+
 	va_start(list, format);
 
-	while (format && format[iterador])
+	while (format && format[iter])
 	{
-		index_tuvieja = 0;
-		while (tu_vieja[index_tuvieja].type)
+		indx_type = 0;
+		while (type[indx_type].type)
 		{
-			if (*tu_vieja[index_tuvieja].type == format[iterador])
+			if (*type[indx_type].type == format[iter])
 			{
 				printf("%s", separator);
-				tu_vieja[index_tuvieja].func(list);
+				type[indx_type].func(list);
 				separator = ", ";
 			}
-			index_tuvieja++;
+			indx_type++;
 		}
-		iterador++;
+		iter++;
 	}
 	printf("\n");
 	va_end(list);
