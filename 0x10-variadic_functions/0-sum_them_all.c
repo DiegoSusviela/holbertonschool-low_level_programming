@@ -2,9 +2,8 @@
 #include <stdarg.h>
 
 /**
- * recursion - imprime
- * @s: numero a imprimir
- * @position: un char ahi
+ * sum_them_all - imprime
+ * @n: numero a imprimir
  *
 * Description: Show a message blablabla
 * Return: Always 0 (Success)
