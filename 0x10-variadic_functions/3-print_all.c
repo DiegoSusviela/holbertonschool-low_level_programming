@@ -36,7 +36,7 @@ void print_int(va_list list)
 
 void print_float(va_list list)
 {
-	printf("%f", va_arg(list, float));
+	printf("%f", va_arg(list, double));
 }
 
 /**
