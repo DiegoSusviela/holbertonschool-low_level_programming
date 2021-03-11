@@ -17,7 +17,7 @@ typedef struct datatype
 {
 	char *type;
 	void (*func)(va_list list);
-}data_t;
+} data_t;
 
 int sum_them_all(const unsigned int n, ...);
 void print_numbers(const char *separator, const unsigned int n, ...);
