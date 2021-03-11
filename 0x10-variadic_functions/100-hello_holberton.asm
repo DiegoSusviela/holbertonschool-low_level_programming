@@ -1,7 +1,7 @@
-        .file   "more_testing_advanced.c"
+        .file   "helo_hol.c"
         .section        .rodata
 .LC0:
-        .string "Hello, Holberton"
+        .string "Hello, Holberton\n"
         .text
         .globl  main
         .type   main, @function
@@ -13,8 +13,10 @@ main:
         .cfi_offset 6, -16
         movq    %rsp, %rbp
         .cfi_def_cfa_register 6
-        movl    $.LC0, %edi
-        call    puts
+        movl    $17, %edx
+        movl    $.LC0, %esi
+        movl    $1, %edi
+        call    write
         popq    %rbp
         .cfi_def_cfa 7, 8
         ret
