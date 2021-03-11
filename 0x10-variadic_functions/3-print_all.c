@@ -58,7 +58,6 @@ void print_char_2(va_list list)
 		return;
 	}
 	printf("%s", s_aux);
-
 }
 
 /**
