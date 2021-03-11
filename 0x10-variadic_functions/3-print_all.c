@@ -50,7 +50,7 @@ void print_float(va_list list)
 void print_char_2(va_list list)
 {
 	char *s_aux;
-	
+
 	s_aux = va_arg(list, char*);
 	if (s_aux)
 		printf("%s", s_aux);
@@ -82,7 +82,8 @@ void print_all(const char * const format, ...)
 	int index_tuvieja, iterador = 0;
 	va_list list;
 	char *separator = "";
-	va_start (list, format);
+	
+	va_start(list, format);
 
 	while (format && format[iterador])
 	{
