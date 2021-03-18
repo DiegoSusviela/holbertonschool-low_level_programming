@@ -4,7 +4,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <stdarg.h>
-#include "basic_operations.c"
+
 
 /**
  * struct list_s - singly linked list
@@ -32,5 +32,7 @@ void free_list(list_t *head);
 typedef list_t *localizador;
 
 typedef enum { false, true } boolean;
+
+#include "basic_operations.c"
 
 #endif
