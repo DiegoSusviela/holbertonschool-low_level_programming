@@ -69,5 +69,5 @@ void insertar_al_final(list_t **head, list_t *a_insertar)
 	}
 	while (siguiente(aux))
 		aux = siguiente(aux);
-	head->next = a_insertar;
+	*head->next = a_insertar;
 }
