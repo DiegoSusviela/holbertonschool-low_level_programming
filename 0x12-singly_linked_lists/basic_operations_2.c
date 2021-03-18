@@ -8,7 +8,7 @@
 * Return: Always 0 (Success)
 */
 
-list_t *nuevo_nodo(const char *str)
+list_t *nuevo_nodo(char *str)
 {
 	list_t *new_node;
 

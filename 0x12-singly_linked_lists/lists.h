@@ -33,7 +33,7 @@ const list_t *es_final_cadena(const list_t *loc);
 const list_t *siguiente(const list_t *loc);
 const list_t *es_localizador_cadena(const list_t *loc);
 void print_node(const list_t *loc);
-list_t *nuevo_nodo(const char *str);
+list_t *nuevo_nodo(char *str);
 void instertar_en_cadena(list_t **head, list_t *a_insertar);
 
 #endif

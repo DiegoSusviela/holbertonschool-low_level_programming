@@ -14,8 +14,7 @@
 
 list_t *add_node(list_t **head, const char *str)
 {
-	const char *str_insertar = strdup(str);
-	list_t *a_insertar = nuevo_nodo(str_insertar);
+	list_t *a_insertar = nuevo_nodo(strdup(str));
 	if (!a_insertar)
 		return (NULL);
 	instertar_en_cadena(head, a_insertar);	
