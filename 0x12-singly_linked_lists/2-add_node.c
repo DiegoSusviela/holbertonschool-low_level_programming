@@ -16,6 +16,8 @@ list_t *add_node(list_t **head, const char *str)
 
 	if (!a_insertar)
 		return (NULL);
+	if (!str)
+		return (NULL);
 	instertar_en_cadena(head, a_insertar);
 	return (a_insertar);
 }
