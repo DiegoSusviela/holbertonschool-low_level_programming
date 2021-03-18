@@ -30,9 +30,9 @@ list_t *add_node(list_t **head, const char *str);
 list_t *add_node_end(list_t **head, const char *str);
 void free_list(list_t *head);
 
-int es_final_cadena(localizador loc);
+localizador es_final_cadena(localizador loc);
 localizador siguiente(localizador loc);
-int es_localizador_cadena(localizador loc);
+localizador es_localizador_cadena(localizador loc);
 void print_node(localizador loc);
 
 #endif

@@ -5,22 +5,22 @@
 localizador siguiente(localizador loc)
 {
 	if (es_final_cadena(loc))
-		return (NULL);
+		return (0);
 	else
 		return (loc->next);
 }
 
-int es_final_cadena(localizador loc)
+localizador es_final_cadena(localizador loc)
 {
 	if (es_localizador_cadena(loc->next))
 		return (NULL);
-	return (1);
+	return (loc);
 }
 
-int es_localizador_cadena(localizador loc)
+localizador es_localizador_cadena(localizador loc)
 {
 	if (loc)
-		return (1);
+		return (loc);
 	return (NULL);
 }
 
