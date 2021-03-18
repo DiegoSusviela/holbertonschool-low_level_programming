@@ -26,5 +26,8 @@ const list_t *es_localizador_cadena(const list_t *loc)
 
 void print_node(const list_t *loc)
 {
-	printf("[%d] %s\n", loc->len, loc->str);
+	if (loc->str)
+		printf("[%d] %s\n", loc->len, loc->str);
+	else
+		printf("[0] (nil)\n");
 }

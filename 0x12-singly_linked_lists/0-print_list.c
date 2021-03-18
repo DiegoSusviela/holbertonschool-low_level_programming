@@ -3,15 +3,8 @@
 
 size_t print_list(const list_t *h)
 {
-	int count = 1;
-	if (es_localizador_cadena(h))
-		print_node(h);
-	else 
-	{
-		printf("[0] (nil)\n");
-		return (0);
-	}
-	h = siguiente(h);
+	int count = 0;
+	
 	while (es_localizador_cadena(h))
 	{
 		print_node(h);
