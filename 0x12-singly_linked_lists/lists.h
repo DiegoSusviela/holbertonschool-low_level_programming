@@ -4,7 +4,6 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <stdarg.h>
-#include "basic_operations.c"
 
 
 /**
@@ -23,6 +22,8 @@ typedef struct list_s
     struct list_s *next;
 } list_t;
 
+typedef list_s *localizador;
+
 size_t print_list(const list_t *h);
 size_t list_len(const list_t *h);
 list_t *add_node(list_t **head, const char *str);
@@ -34,7 +35,6 @@ localizador siguiente(localizador loc);
 int es_localizador_cadena(localizador loc);
 void print_node(localizador loc);
 
-
-typedef list_s *localizador;
+#include "basic_operations.c"
 
 #endif
