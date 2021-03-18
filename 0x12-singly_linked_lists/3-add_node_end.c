@@ -13,15 +13,9 @@
 list_t *add_node_end(list_t **head, const char *str)
 {
 	list_t *a_insertar = nuevo_nodo(strdup(str));
-	const list_t *aux = *head;
 
 	if (!a_insertar)
 		return (NULL);
-	if (!*head)
-	{
-		*head = a_insertar;
-		return (a_insertar);
-	}
-	insertar_al_final(aux, a_insertar);
+	insertar_al_final(head, a_insertar);
 	return (a_insertar);
 }
