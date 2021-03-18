@@ -1,4 +1,5 @@
 #include "lists.h"
+#include "aux_funcs.c"
 
 /**
  * siguiente - imprime

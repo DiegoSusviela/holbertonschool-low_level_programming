@@ -5,6 +5,7 @@
 #include <stdlib.h>
 #include <stdarg.h>
 #include <stddef.h>
+#include <string.h> 
 
 /**
  * struct list_s - singly linked list
@@ -32,5 +33,7 @@ const list_t *es_final_cadena(const list_t *loc);
 const list_t *siguiente(const list_t *loc);
 const list_t *es_localizador_cadena(const list_t *loc);
 void print_node(const list_t *loc);
+list_t *nuevo_nodo(const char *str);
+void instertar_en_cadena(list_t **head, list_t *a_insertar);
 
 #endif
