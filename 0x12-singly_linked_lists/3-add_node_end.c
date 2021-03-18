@@ -2,7 +2,7 @@
 #include "basic_operations_2.c"
 
 /**
- * add_node - imprime
+ * add_node_end - imprime
  * @head: some number idk tbf
  * @str: dlkandla
  *

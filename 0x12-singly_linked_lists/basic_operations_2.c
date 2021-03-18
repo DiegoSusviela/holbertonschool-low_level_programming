@@ -57,6 +57,14 @@ int _strlen(const char *s)
 	return (marker);
 }
 
+/**
+ * insertar_al_final - Entry point
+ * @head: wopa
+ * @a_insertar: adnajkdl
+ *
+ * Description: Show a message blablabla
+ * Return: Always 0 (Success)
+ */
 
 void insertar_al_final(list_t **head, list_t *a_insertar)
 {
