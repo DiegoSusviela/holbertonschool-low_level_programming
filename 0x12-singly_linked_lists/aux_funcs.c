@@ -1,4 +1,8 @@
 
+#ifndef AUX
+#define AUX
+
+#include "lists.h"
 #include "lists.h"
 
 /**
@@ -17,3 +21,5 @@ int _strlen(const char *s)
 		marker++;
 	return (marker);
 }
+
+#endif

@@ -1,3 +1,5 @@
+#ifndef OPERATOR_2
+#define OPERATOR_2
 #include "lists.h"
 
 /**
@@ -27,3 +29,5 @@ void instertar_en_cadena(list_t **head, list_t *a_insertar)
 	a_insertar->next = *head;
 	*head = a_insertar;
 }
+
+#endif

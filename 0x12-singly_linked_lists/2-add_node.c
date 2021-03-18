@@ -1,4 +1,7 @@
 #include "lists.h"
+#include "basic_operations.c"
+#include "basic_operations_2.c"
+#include "aux_funcs.c"
 
 /**
  * list_len - imprime
