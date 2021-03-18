@@ -1,6 +1,6 @@
 #include "lists.h"
 
-typedef list_t *localizador;
+/*typedef list_t *localizador;*/
 
 localizador siguiente(localizador loc) {
 	if (es_final_cadena(loc) == true)
