@@ -60,7 +60,7 @@ int _strlen(const char *s)
 
 void insertar_al_final(list_t **head, list_t *a_insertar)
 {
-	const list_t *aux = *head;
+	list_t *aux = *head;
 
 	if (!*head)
 	{

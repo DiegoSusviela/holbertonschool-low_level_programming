@@ -8,7 +8,7 @@
 * Return: Always 0 (Success)
 */
 
-const list_t *siguiente(const list_t *loc)
+list_t *siguiente(const list_t *loc)
 {
 	if (es_final_cadena(loc))
 		return (0);
