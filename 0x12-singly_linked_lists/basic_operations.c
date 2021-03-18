@@ -4,24 +4,24 @@
 
 localizador siguiente(localizador loc)
 {
-	if (es_final_cadena(loc) == true)
+	if (es_final_cadena(loc))
 		return (NULL);
 	else
 		return (loc->next);
 }
 
-boolean es_final_cadena(localizador loc)
+int es_final_cadena(localizador loc)
 {
 	if (loc->next)
-		return (false);
-	return (true);
+		return (NULL);
+	return (1);
 }
 
-boolean es_localizador_cadena(localizador loc)
+int es_localizador_cadena(localizador loc)
 {
 	if (loc)
-		return (true);
-	return (false);
+		return (1);
+	return (NULL);
 }
 
 void print_node(localizador loc)

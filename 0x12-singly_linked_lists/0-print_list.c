@@ -3,7 +3,7 @@
 size_t print_list(const list_t *h)
 {
 	int count = 1;
-	if (es_localizador_cadena(h) == true)
+	if (es_localizador_cadena(h))
 		print_node(h);
 	else 
 	{
@@ -11,7 +11,7 @@ size_t print_list(const list_t *h)
 		return (0);
 	}
 	h = siguiente(h);
-	while (es_localizador_cadena(h) == true)
+	while (es_localizador_cadena(h))
 	{
 		print_node(h);
 		h = siguiente(h);
