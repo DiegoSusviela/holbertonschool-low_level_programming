@@ -79,3 +79,9 @@ void insertar_al_final(list_t **head, list_t *a_insertar)
 		aux = siguiente(aux);
 	aux->next = a_insertar;
 }
+
+void liberar_nodo(list_t *a_liberar)
+{
+	free(a_liberar->str);
+	free(a_liberar);
+}
