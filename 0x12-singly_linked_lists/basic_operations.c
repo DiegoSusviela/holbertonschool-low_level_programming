@@ -17,7 +17,7 @@ localizador es_final_cadena(localizador loc)
 	return (loc);
 }
 
-localizador es_localizador_cadena(localizador loc)
+localizador es_localizador_cadena(const list_t *loc)
 {
 	if (loc)
 		return (loc);
