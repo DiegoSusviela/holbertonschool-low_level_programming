@@ -4,6 +4,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <stdarg.h>
+#include <stddef.h>
 #include "basic_operations.c"
 
 
@@ -22,6 +23,8 @@ typedef struct list_s
     unsigned int len;
     struct list_s *next;
 } list_t;
+
+typedef list_s *localizador;
 
 size_t print_list(const list_t *h);
 size_t list_len(const list_t *h);

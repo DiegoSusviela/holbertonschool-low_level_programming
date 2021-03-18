@@ -2,7 +2,7 @@
 
 /*typedef list_t *localizador;*/
 
-list_t *siguiente(const list_t *loc)
+localizador siguiente(localizador loc)
 {
 	if (es_final_cadena(loc))
 		return (NULL);
@@ -10,21 +10,21 @@ list_t *siguiente(const list_t *loc)
 		return (loc->next);
 }
 
-int es_final_cadena(const list_t *loc)
+int es_final_cadena(localizador loc)
 {
-	if (loc->next)
+	if (es_localizador_cadena(loc->next))
 		return (NULL);
 	return (1);
 }
 
-int es_localizador_cadena(const list_t *loc)
+int es_localizador_cadena(localizador loc)
 {
 	if (loc)
 		return (1);
 	return (NULL);
 }
 
-void print_node(const list_t *loc)
+void print_node(localizador loc)
 {
 	printf("[%d] %s", loc->len, loc->str);
 }
