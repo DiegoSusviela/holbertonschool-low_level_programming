@@ -1,6 +1,4 @@
 #include "lists.h"
-#include "aux_funcs.c"
-
 
 /**
  * nuevo_nodo - imprime
