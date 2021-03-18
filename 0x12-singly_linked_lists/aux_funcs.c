@@ -9,9 +9,9 @@
  * Return: Always 0 (Success)
  */
 
-int _strlen(const char *s)
+unsigned int _strlen(const char *s)
 {
-	int marker = 0;
+	unsigned int marker = 0;
 
 	while (*(s + marker))
 		marker++;
