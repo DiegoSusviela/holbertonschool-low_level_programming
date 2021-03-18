@@ -58,16 +58,9 @@ int _strlen(const char *s)
 }
 
 
-void insertar_al_final(list_t **head, list_t *a_insertar)
+void insertar_al_final(const list_t *aux, list_t *a_insertar)
 {
-	const list_t *aux = *head;
-
-	if (!*head)
-	{
-		*head = a_insertar;
-		return;
-	}
 	while (siguiente(aux))
 		aux = siguiente(aux);
-	*head->next = a_insertar;
+	aux->next = a_insertar;
 }
