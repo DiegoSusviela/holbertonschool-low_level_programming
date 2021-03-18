@@ -35,5 +35,6 @@ const list_t *es_localizador_cadena(const list_t *loc);
 void print_node(const list_t *loc);
 list_t *nuevo_nodo(char *str);
 void instertar_en_cadena(list_t **head, list_t *a_insertar);
+int _strlen(const char *s);
 
 #endif
