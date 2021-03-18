@@ -60,13 +60,13 @@ int _strlen(const char *s)
 
 void insertar_al_final(list_t **head, list_t *a_insertar)
 {
+	list_t *aux = *head;
+
 	if (!*head)
 	{
 		*head = a_insertar;
-		return (a_insertar);
+		return;
 	}
-	list_t *aux = *head
-
 	while (siguiente(aux))
 		aux = siguiente(aux);
 	aux->next = a_insertar;
