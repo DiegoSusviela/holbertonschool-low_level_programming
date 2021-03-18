@@ -14,7 +14,8 @@ list_t *nuevo_nodo(char *str)
 
 	if (!new_node)
 		return (NULL);
-
+	if (new_node->str == NULL)
+		free(new_node);
 	new_node->str = str;
 	new_node->len = _strlen(str);
 	new_node->next = NULL;
