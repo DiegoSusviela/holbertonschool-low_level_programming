@@ -1,4 +1,5 @@
 #include "lists.h"
+#include "basic_operations.c"
 
 size_t print_list(const list_t *h)
 {
