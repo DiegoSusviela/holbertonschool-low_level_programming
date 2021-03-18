@@ -30,7 +30,7 @@ list_t *add_node_end(list_t **head, const char *str);
 void free_list(list_t *head);
 
 const list_t *es_final_cadena(const list_t *loc);
-const list_t *siguiente(const list_t *loc);
+list_t *siguiente(const list_t *loc);
 const list_t *es_localizador_cadena(const list_t *loc);
 void print_node(const list_t *loc);
 list_t *nuevo_nodo(char *str);
