@@ -11,6 +11,7 @@
 list_t *nuevo_nodo(char *str)
 {
 	list_t *new_node = malloc(sizeof(list_t));
+
 	if (!new_node)
 		return (NULL);
 
