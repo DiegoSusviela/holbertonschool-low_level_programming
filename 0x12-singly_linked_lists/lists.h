@@ -4,6 +4,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <stdarg.h>
+#include "basic_operations.c"
 
 
 /**
@@ -22,19 +23,15 @@ typedef struct list_s
     struct list_s *next;
 } list_t;
 
-typedef list_s *localizador;
-
 size_t print_list(const list_t *h);
 size_t list_len(const list_t *h);
 list_t *add_node(list_t **head, const char *str);
 list_t *add_node_end(list_t **head, const char *str);
 void free_list(list_t *head);
 
-int es_final_cadena(localizador loc);
-localizador siguiente(localizador loc);
-int es_localizador_cadena(localizador loc);
-void print_node(localizador loc);
-
-#include "basic_operations.c"
+int es_final_cadena(const list_t loc);
+list_t *siguiente(const list_t loc);
+int es_localizador_cadena(const list_t loc);
+void print_node(const list_t loc);
 
 #endif
