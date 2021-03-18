@@ -6,6 +6,9 @@
 #include <stdarg.h>
 #include <stddef.h>
 #include <string.h> 
+#include "basic_operations.c"
+#include "basic_operations_2.c"
+#include "aux_funcs.c"
 
 /**
  * struct list_s - singly linked list
