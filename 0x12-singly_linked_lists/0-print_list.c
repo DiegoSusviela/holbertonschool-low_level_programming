@@ -1,6 +1,5 @@
 #include "lists.h"
 #include "basic_operations.c"
-#include "aux_funcs.c"
 
 /**
  * print_list - imprime

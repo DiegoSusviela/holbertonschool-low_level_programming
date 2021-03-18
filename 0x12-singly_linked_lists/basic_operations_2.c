@@ -27,3 +27,20 @@ void instertar_en_cadena(list_t **head, list_t *a_insertar)
 	a_insertar->next = *head;
 	*head = a_insertar;
 }
+
+/**
+ * _strlen - Entry point
+ * @s: wopa
+ *
+ * Description: Show a message blablabla
+ * Return: Always 0 (Success)
+ */
+
+int _strlen(const char *s)
+{
+	int marker = 0;
+
+	while (*(s + marker))
+		marker++;
+	return (marker);
+}
