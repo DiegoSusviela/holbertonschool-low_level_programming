@@ -1,3 +1,5 @@
+#include "lists.h"
+
 localizador siguiente(localizador loc) {
 	if (es_final_cadena(loc) == true)
 		return (NULL);
