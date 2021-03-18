@@ -37,5 +37,6 @@ list_t *nuevo_nodo(char *str);
 void instertar_en_cadena(list_t **head, list_t *a_insertar);
 int _strlen(const char *s);
 void insertar_al_final(list_t **head, list_t *a_insertar);
+void liberar_nodo(list_t *a_liberar);
 
 #endif

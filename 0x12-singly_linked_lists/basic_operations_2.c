@@ -80,6 +80,14 @@ void insertar_al_final(list_t **head, list_t *a_insertar)
 	aux->next = a_insertar;
 }
 
+/**
+ * liberar_nodo - Entry point
+ * @a_liberar: wopa
+ *
+ * Description: Show a message blablabla
+ * Return: Always 0 (Success)
+ */
+
 void liberar_nodo(list_t *a_liberar)
 {
 	free(a_liberar->str);
