@@ -36,5 +36,6 @@ void print_node(const list_t *loc);
 list_t *nuevo_nodo(char *str);
 void instertar_en_cadena(list_t **head, list_t *a_insertar);
 int _strlen(const char *s);
+void insertar_al_final(list_t **head, list_t *a_insertar);
 
 #endif
