@@ -5,8 +5,6 @@
 #include <stdlib.h>
 #include <stdarg.h>
 #include <stddef.h>
-#include "basic_operations.c"
-
 
 /**
  * struct list_s - singly linked list
