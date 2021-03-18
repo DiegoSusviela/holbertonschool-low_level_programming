@@ -1,6 +1,3 @@
-#ifndef OPERATOR_1
-#define OPERATOR_1
-
 #include "lists.h"
 
 /**
@@ -64,5 +61,3 @@ void print_node(const list_t *loc)
 	else
 		printf("[0] (nil)\n");
 }
-
-#endif
