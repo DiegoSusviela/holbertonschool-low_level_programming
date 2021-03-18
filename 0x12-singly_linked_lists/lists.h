@@ -28,6 +28,11 @@ list_t *add_node(list_t **head, const char *str);
 list_t *add_node_end(list_t **head, const char *str);
 void free_list(list_t *head);
 
+boolean es_final_cadena(localizador loc);
+localizador siguiente(localizador loc);
+boolean es_localizador_cadena(localizador loc);
+void print_node(localizador loc);
+
 
 typedef list_t *localizador;
 
