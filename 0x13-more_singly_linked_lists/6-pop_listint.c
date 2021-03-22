@@ -10,7 +10,7 @@ int pop_listint(listint_t **head)
 		return (0);
 	aux = *head->n;
 	aux2 = *head;
-	head = *head->next;
+	head = siguiente(head);
 
 	liberar_nodo(aux2);
 	return (aux);
