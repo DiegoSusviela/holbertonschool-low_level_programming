@@ -3,7 +3,7 @@
 /**
  * insert_nodeint_at_index - imprime
  * @head: some number idk tbf
- * @idk: alndl
+ * @idx: alndl
  * @n: klasndl
  *
 * Description: Show a message blablabla
