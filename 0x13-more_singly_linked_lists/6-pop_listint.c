@@ -8,9 +8,9 @@ int pop_listint(listint_t **head)
 
 	if(cadena_vacia(head))
 		return (0);
-	aux = **head->n;
+	aux = *head->n;
 	aux2 = *head;
-	head = head->next;
+	head = *head->next;
 
 	liberar_nodo(aux2);
 	return (aux);
