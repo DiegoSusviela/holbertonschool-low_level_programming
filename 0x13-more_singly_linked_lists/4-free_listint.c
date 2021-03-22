@@ -14,7 +14,7 @@ void liberar_nodo(listint_t *a_liberar)
 }
 
 /**
- * free_list - imprime
+ * free_listint - imprime
  * @head: some number idk tbf
  *
 * Description: Show a message blablabla

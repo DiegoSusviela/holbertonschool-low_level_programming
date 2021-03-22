@@ -1,5 +1,13 @@
 #include "lists.h"
 
+/**
+ * pop_listint - imprime
+ * @head: some number idk tbf
+ *
+* Description: Show a message blablabla
+* Return: Always 0 (Success)
+*/
+
 int pop_listint(listint_t **head)
 {
 	int aux;

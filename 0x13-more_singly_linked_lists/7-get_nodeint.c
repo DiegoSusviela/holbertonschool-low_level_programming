@@ -1,5 +1,14 @@
 #include "lists.h"
 
+/**
+ * get_nodeint_at_index - imprime
+ * @head: some number idk tbf
+ * @index: aksn
+ *
+* Description: Show a message blablabla
+* Return: Always 0 (Success)
+*/
+
 listint_t *get_nodeint_at_index(listint_t *head, unsigned int index)
 {
 	listint_t *aux = head;
