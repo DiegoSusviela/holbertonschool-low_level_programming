@@ -15,7 +15,7 @@ int sum_listint(listint_t *head)
 	int suma = 0;
 
 	if (!es_localizador_cadena(aux))
-		return(0);
+		return (0);
 	while (es_localizador_cadena(aux))
 	{
 		suma += aux->n;
