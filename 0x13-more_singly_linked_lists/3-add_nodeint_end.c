@@ -2,9 +2,9 @@
 #include "basic_operations_2.c"
 
 /**
- * add_node_end - imprime
+ * add_nodeint_end - imprime
  * @head: some number idk tbf
- * @str: dlkandla
+ * @n: dlkandla
  *
 * Description: Show a message blablabla
 * Return: Always 0 (Success)
