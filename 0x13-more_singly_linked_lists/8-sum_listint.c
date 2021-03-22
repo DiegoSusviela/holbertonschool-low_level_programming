@@ -6,7 +6,7 @@ int sum_listint(listint_t *head)
 	listint_t *aux = head;
 	int suma;
 
-	if (cadena_vacia(head))
+	if (!es_localizador_cadena(aux))
 		return(0);
 	while (es_localizador_cadena(aux))
 	{
