@@ -5,6 +5,12 @@ int delete_nodeint_at_index(listint_t **head, unsigned int index)
 	listint_t *aux = *head;
 	listint_t *holder;
 
+	if (index == 0 && es_localizador_cadena(aux))
+	{
+		*head = siguiente(*head);
+		liberar_nodo(aux);
+		return (1);
+	}
 	while (es_localizador_cadena(aux) && index > 1)
 	{
 		aux = siguiente(aux);
