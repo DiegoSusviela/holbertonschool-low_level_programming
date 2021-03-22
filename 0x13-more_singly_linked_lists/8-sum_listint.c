@@ -4,7 +4,7 @@
 int sum_listint(listint_t *head)
 {
 	listint_t *aux = head;
-	int suma;
+	int suma = 0;
 
 	if (!es_localizador_cadena(aux))
 		return(0);
