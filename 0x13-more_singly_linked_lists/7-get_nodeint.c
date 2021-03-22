@@ -2,7 +2,7 @@
 
 listint_t *get_nodeint_at_index(listint_t *head, unsigned int index)
 {
-	const listint_t *aux = head;
+	listint_t *aux = head;
 
 	while (es_localizador_cadena(aux) && index > 0)
 	{
