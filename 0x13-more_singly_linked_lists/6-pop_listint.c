@@ -1,5 +1,4 @@
 #include "lists.h"
-#include "4-free_listint.c"
 
 int pop_listint(listint_t **head)
 {
