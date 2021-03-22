@@ -4,11 +4,11 @@
 int pop_listint(listint_t **head)
 {
 	int aux;
-	listint_t aux2;
+	listint_t *aux2;
 
 	if(cadena_vacia(head))
 		return (0);
-	aux = head->n;
+	aux = **head->n;
 	aux2 = *head;
 	head = head->next;
 
