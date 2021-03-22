@@ -16,6 +16,6 @@ listint_t *add_nodeint_end(listint_t **head, const int n)
 
 	if (!a_insertar)
 		return (NULL);
-	insertar_al_final(head, a_insertar);
+	insertar_al_final(*head, a_insertar);
 	return (a_insertar);
 }
