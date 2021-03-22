@@ -3,6 +3,6 @@
 
 void free_listint2(listint_t **head)
 {
-	free_listint(head);
+	free_listint(*head);
 	head = NULL;
 }
