@@ -84,7 +84,7 @@ void insertar_al_final(listint_t **head, listint_t *a_insertar)
 listint_t *cadena_vacia(listint_t **cad)
 {
 	if (cad)
-		return (cad);
+		return (*cad);
 	return (NULL);
 }
 
