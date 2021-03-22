@@ -1,5 +1,15 @@
 #include "lists.h"
 
+/**
+ * insert_nodeint_at_index - imprime
+ * @head: some number idk tbf
+ * @idk: alndl
+ * @n: klasndl
+ *
+* Description: Show a message blablabla
+* Return: Always 0 (Success)
+*/
+
 listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
 {
 	listint_t *aux = *head;

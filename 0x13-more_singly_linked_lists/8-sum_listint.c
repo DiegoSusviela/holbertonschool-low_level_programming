@@ -1,6 +1,14 @@
 #include "lists.h"
 #include "basic_operations.c"
 
+/**
+ * sum_listint - imprime
+ * @head: some number idk tbf
+ *
+* Description: Show a message blablabla
+* Return: Always 0 (Success)
+*/
+
 int sum_listint(listint_t *head)
 {
 	listint_t *aux = head;
