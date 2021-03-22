@@ -16,6 +16,6 @@ listint_t *add_nodeint(listint_t **head, const int n)
 
 	if (!a_insertar)
 		return (NULL);
-	instertar_en_cadena(*head, a_insertar);
+	instertar_en_cadena(head, a_insertar);
 	return (a_insertar);
 }
