@@ -1,6 +1,13 @@
 #include "lists.h"
 #include "basic_operations.c"
 
+/**
+ * print_mem_loc - imprime
+ * @loc1: some number idk tbf
+ *
+* Description: Show a message blablabla
+* Return: Always 0 (Success)
+*/
 
 void print_mem_loc(const listint_t *loc1)
 {
