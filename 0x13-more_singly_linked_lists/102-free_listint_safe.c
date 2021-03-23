@@ -31,8 +31,6 @@ size_t free_listint_safe(listint_t **h)
 		liberar_nodo(loc1);
 		count++;
 	}
-	loc1 = NULL;
-	loc2 = NULL;
 	*h = NULL;
 	return (count);
 }
