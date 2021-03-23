@@ -62,7 +62,7 @@ size_t free_listint_safe(listint_t **head)
 			iter++;
 		}
 		count++;
-		list = c_l(list, count, head);
+		list = c_l(list, count, *head);
 		loc = siguiente(*head);
 		free(*head);
 		*head = loc;
