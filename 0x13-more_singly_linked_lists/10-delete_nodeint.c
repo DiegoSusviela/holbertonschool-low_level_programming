@@ -1,4 +1,5 @@
 #include "lists.h"
+#include "5-free_listint2.c"
 
 /**
  * delete_nodeint_at_index - imprime
