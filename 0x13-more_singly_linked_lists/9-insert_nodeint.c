@@ -1,4 +1,5 @@
 #include "lists.h"
+#include "basic_operations_2.c"
 
 /**
  * insert_nodeint_at_index - imprime
