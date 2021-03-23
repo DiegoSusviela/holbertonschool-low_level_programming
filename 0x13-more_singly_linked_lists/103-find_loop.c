@@ -11,14 +11,25 @@
 
 listint_t *find_listint_loop(listint_t *head)
 {
-	listint_t *loc1;
+	listint_t *low, *high;
 
-	if (!head)
+	low = high = head;
+	while (es_localizador_cadena(low) && es_localizador_cadena(high) && siguiente(high))
+	{
+		low = siguiente(low);
+		high = siguiente(siguiente(high));
+		if (low == high)
+		{
+			low = head;
+			break;
+		}
+	}
+	if (!es_localizador_cadena(low) || !es_localizador_cadena(high) || !siguiente(high))
 		return (NULL);
-	loc1 = head;
-	while (es_localizador_cadena(loc1) && siguiente(loc1) < loc1)
-		loc1 = siguiente(loc1);
-	if (es_localizador_cadena(loc1))
-		return (siguiente(loc1));
-	return (NULL);
+	while (low != high)
+	{
+		low = siguiente(low);
+		high = siguiente(high);
+	}
+	return (high);
 }
