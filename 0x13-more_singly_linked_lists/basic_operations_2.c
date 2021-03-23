@@ -2,7 +2,7 @@
 
 /**
  * nuevo_nodo - imprime
- * @str: some number idk tbf
+ * @n: some number idk tbf
  *
 * Description: Show a message blablabla
 * Return: Always 0 (Success)
@@ -74,19 +74,13 @@ void insertar_al_final(listint_t **head, listint_t *a_insertar)
 	aux->next = a_insertar;
 }
 /**
- * cadena_vacia - Entry point
- * @cad: wopa
+ * instertar_en_pos - Entry point
+ * @aux: wopa
+ * @a_insertar: akjsn
  *
  * Description: Show a message blablabla
  * Return: Always 0 (Success)
  */
-
-listint_t *cadena_vacia(listint_t **cad)
-{
-	if (cad)
-		return (*cad);
-	return (NULL);
-}
 
 void instertar_en_pos(listint_t *aux, listint_t *a_insertar)
 {
