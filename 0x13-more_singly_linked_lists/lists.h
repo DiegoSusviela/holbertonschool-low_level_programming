@@ -50,6 +50,7 @@ void insertar_al_final(listint_t **head, listint_t *a_insertar);
 listint_t *cadena_vacia(listint_t **cad);
 void instertar_en_pos(listint_t *aux, listint_t *a_insertar);
 void liberar_nodo(listint_t *a_liberar);
+void print_mem_loc(const listint_t *loc1);
 
 
 #endif
