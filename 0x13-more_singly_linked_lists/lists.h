@@ -18,8 +18,8 @@
 
 typedef struct listint_s
 {
-    int n;
-    struct listint_s *next;
+	int n;
+	struct listint_s *next;
 } listint_t;
 
 size_t print_listint(const listint_t *h);
@@ -41,7 +41,7 @@ listint_t *find_listint_loop(listint_t *head);
 listint_t *siguiente(const listint_t *loc);
 const listint_t *es_final_cadena(const listint_t *loc);
 const listint_t *es_localizador_cadena(const listint_t *loc);
-void print_node(const listint_t *loc);
+void print_node(const listint_t *loc);	
 listint_t *nuevo_nodo(int n);
 
 void instertar_en_cadena(listint_t **head, listint_t *a_insertar);
