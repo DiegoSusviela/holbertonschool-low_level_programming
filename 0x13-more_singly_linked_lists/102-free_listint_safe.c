@@ -14,8 +14,6 @@ size_t free_listint_safe(listint_t **h)
 	listint_t *loc1, *loc2 = NULL;
 	int count = 0;
 
-	if (!h)
-		return (count);
 	loc1 = *h;
 	if (!*h)
 		return (count);
