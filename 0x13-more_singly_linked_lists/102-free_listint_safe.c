@@ -2,7 +2,7 @@
 #include "5-free_listint2.c"
 
 /**
- * c_l - imprime
+ * c_d - imprime
  * @old: some number idk tbf
  * @size: some number idk tbf
  * @loc: some number idk tbf
@@ -11,7 +11,7 @@
 * Return: Always 0 (Success)
 */
 
-listint_t **c_l(listint_t **old, size_t size, listint_t *loc)
+listint_t **c_d(listint_t **old, size_t size, listint_t *loc)
 {
 	listint_t **new_list;
 	size_t iter;
@@ -61,7 +61,7 @@ size_t free_listint_safe(listint_t **head)
 			iter++;
 		}
 		count++;
-		list = c_l(list, count, *head);
+		list = c_d(list, count, *head);
 		loc = siguiente(*head);
 		free(*head);
 		*head = loc;
