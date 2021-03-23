@@ -10,7 +10,7 @@
 
 listint_t *find_listint_loop(listint_t *head)
 {
-	const listint_t *loc1 = head;
+	listint_t *loc1 = head;
 
 	while (es_localizador_cadena(loc1) && siguiente(loc1) < loc1)
 		loc1 = siguiente(loc1);
