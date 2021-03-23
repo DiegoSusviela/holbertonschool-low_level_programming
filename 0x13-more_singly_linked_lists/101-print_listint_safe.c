@@ -2,11 +2,11 @@
 #include "basic_operations.c"
 
 /**
- * crear_lista - imprime
+ * c_l - imprime
  * @old: some number idk tbf
  * @size: some number idk tbf
  * @loc: some number idk tbf
- * 
+ *
 * Description: Show a message blablabla
 * Return: Always 0 (Success)
 */
