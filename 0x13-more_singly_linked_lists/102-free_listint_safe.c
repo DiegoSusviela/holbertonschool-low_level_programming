@@ -43,6 +43,6 @@ size_t free_listint_safe(listint_t **h)
 		print_mem_loc(loc1);
 		print_node(loc1);
 	}
-	h = NULL;
+	*h = NULL;
 	return (count);
 }
