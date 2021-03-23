@@ -2,9 +2,9 @@
 #include "basic_operations.c"
 
 
-void print_mem_loc(listint_t *loc1)
+void print_mem_loc(const listint_t *loc1)
 {
-	printf("[%p] ", &loc1);
+	printf("[%p] ", (void *) loc1);
 }
 
 /**
@@ -18,7 +18,7 @@ void print_mem_loc(listint_t *loc1)
 size_t print_listint_safe(const listint_t *head)
 {
 	int count = 0;
-	listint_t *loc1 = head;
+	const listint_t *loc1 = head;
 
 	while (es_localizador_cadena(loc1))
 	{
