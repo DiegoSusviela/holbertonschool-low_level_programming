@@ -13,6 +13,8 @@ listint_t *find_listint_loop(listint_t *head)
 {
 	listint_t *loc1 = head;
 
+	if (!head)
+		return (NULL);
 	while (es_localizador_cadena(loc1) && siguiente(loc1) < loc1)
 		loc1 = siguiente(loc1);
 	if (es_localizador_cadena(loc1))
