@@ -41,7 +41,7 @@ listint_t *find_listint_loop(listint_t *head);
 listint_t *siguiente(const listint_t *loc);
 const listint_t *es_final_cadena(const listint_t *loc);
 const listint_t *es_localizador_cadena(const listint_t *loc);
-void print_node(const listint_t *loc);	
+void print_node(const listint_t *loc);
 listint_t *nuevo_nodo(int n);
 
 void instertar_en_cadena(listint_t **head, listint_t *a_insertar);
