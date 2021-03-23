@@ -12,9 +12,9 @@
 * Return: Always 0 (Success)
 */
 
-const listint_t **c_l(const listint_t **old, size_t size, const listint_t *loc)
+listint_t **c_l(listint_t **old, size_t size, listint_t *loc)
 {
-	const listint_t **new_list;
+	listint_t **new_list;
 	size_t iter;
 
 	new_list = malloc(size * sizeof(listint_t *));
@@ -41,7 +41,7 @@ const listint_t **c_l(const listint_t **old, size_t size, const listint_t *loc)
 size_t free_listint_safe(listint_t **head)
 {
 	size_t iter, count = 0;
-	const listint_t **list = NULL;
+	listint_t **list = NULL;
 	listint_t *loc;
 
 
