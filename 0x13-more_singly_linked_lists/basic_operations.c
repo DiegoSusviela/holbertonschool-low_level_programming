@@ -1,6 +1,3 @@
-#ifndef BASIC_OPS
-#define BASIC_OPS
-
 #include "lists.h"
 
 /**
@@ -61,5 +58,3 @@ void print_node(const listint_t *loc)
 {
 		printf("%d\n", loc->n);
 }
-
-#endif
