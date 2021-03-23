@@ -16,8 +16,9 @@ listint_t *reverse_listint(listint_t **head)
 	if (!head)
 		return (NULL);
 	loc1 = *head;
-	if (*head)
-		loc2 = siguiente(*head);
+	if (!*head)
+		return (*head);
+	loc2 = siguiente(*head);
 	*head = NULL;
 
 	while (es_localizador_cadena(loc2))
