@@ -3,13 +3,15 @@
 
 /**
  * crear_lista - imprime
- * @loc1: some number idk tbf
- *
+ * @old: some number idk tbf
+ * @size: some number idk tbf
+ * @loc: some number idk tbf
+ * 
 * Description: Show a message blablabla
 * Return: Always 0 (Success)
 */
 
-const listint_t **crear_lista(const listint_t **old_list, size_t size, const listint_t *loc)
+const listint_t **c_l(const listint_t **old, size_t size, const listint_t *loc)
 {
 	const listint_t **new_list;
 	size_t iter;
@@ -17,13 +19,13 @@ const listint_t **crear_lista(const listint_t **old_list, size_t size, const lis
 	new_list = malloc(size * sizeof(listint_t *));
 	if (!new_list)
 	{
-		free(old_list);
+		free(old);
 		exit(98);
 	}
 	for (iter = 0; iter < size - 1; iter++)
-		new_list[iter] = old_list[iter];
+		new_list[iter] = old[iter];
 	new_list[iter] = loc;
-	free(old_list);
+	free(old);
 	return (new_list);
 }
 
@@ -43,7 +45,7 @@ size_t print_listint_safe(const listint_t *head)
 	while (es_localizador_cadena(head))
 	{
 		iter = 0;
-		while(iter < count)
+		while (iter < count)
 		{
 			if (head == list[iter])
 			{
@@ -54,7 +56,7 @@ size_t print_listint_safe(const listint_t *head)
 			iter++;
 		}
 		count++;
-		list = crear_lista(list, count, head);
+		list = c_l(list, count, head);
 		printf("[%p] %d\n", (void *)head, head->n);
 		head = head->next;
 	}
