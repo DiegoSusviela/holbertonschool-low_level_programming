@@ -15,22 +15,12 @@ listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
 	listint_t *aux = *head;
 	listint_t *a_insertar;
 
-	if (idx == 0)
-	{
-		a_insertar = nuevo_nodo(n);
-
-		if (!a_insertar)
-			return (NULL);
-		instertar_en_cadena(head, a_insertar);
-		return (a_insertar);
-	}
-
 	while (es_localizador_cadena(aux) && idx > 1)
 	{
 		aux = siguiente(aux);
 		idx--;
 	}
-	if (!es_localizador_cadena(aux))
+	if (!es_localizador_cadena(aux) && idx != 0)
 		return (NULL);
 
 	a_insertar = nuevo_nodo(n);
