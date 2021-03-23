@@ -1,3 +1,6 @@
+#ifndef BASIC_OPS_2
+#define BASIC_OPS_2
+
 #include "lists.h"
 
 /**
@@ -87,3 +90,5 @@ void instertar_en_pos(listint_t *aux, listint_t *a_insertar)
 	a_insertar->next = siguiente(aux);
 	aux->next = a_insertar;
 }
+
+#endif
