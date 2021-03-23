@@ -1,5 +1,6 @@
 #include "lists.h"
 #include "basic_operations.c"
+#include "basic_operations_2.c"
 
 /**
  * delete_nodeint_at_index - imprime
