@@ -45,15 +45,15 @@ size_t free_listint_safe(listint_t **head)
 	listint_t *loc;
 
 
-	if (!head || !*head )
+	if (!head || !*head)
 		return (count);
 
-	while (es_localizador_cadena(head))
+	while (es_localizador_cadena(*head))
 	{
 		iter = 0;
 		while (iter < count)
 		{
-			if (head == list[iter])
+			if (*head == list[iter])
 			{
 				*head = NULL;
 				free(list);
@@ -63,7 +63,7 @@ size_t free_listint_safe(listint_t **head)
 		}
 		count++;
 		list = c_l(list, count, head);
-		loc = siguiente (*head);
+		loc = siguiente(*head);
 		free(*head);
 		*head = loc;
 	}
