@@ -11,24 +11,23 @@
 
 size_t free_listint_safe(listint_t **h)
 {
-	listint_t *loc1, *loc2 = NULL;
+	listint_t *loc2 = NULL;
 	int count = 0;
 
-	loc1 = *h;
 	if (!*h)
 		return (count);
 	loc2 = siguiente(*h);
 
-	while (es_localizador_cadena(loc1) && siguiente(loc1) < loc1)
+	while (es_localizador_cadena(*h) && siguiente(*h) < *h)
 	{
-		loc2 = loc1;
-		liberar_nodo(loc1);
-		loc1 = loc2;
+		loc2 = *h;
+		liberar_nodo(*h);
+		*h = loc2;
 		count++;
 	}
-	if (es_localizador_cadena(loc1))
+	if (es_localizador_cadena(*h))
 	{
-		liberar_nodo(loc1);
+		liberar_nodo(*h);
 		count++;
 	}
 	*h = NULL;
