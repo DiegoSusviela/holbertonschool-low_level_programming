@@ -2,9 +2,8 @@
 #include "basic_operations_2.c"
 
 /**
- * delete_nodeint_at_index - imprime
+ * reverse_listint - imprime
  * @head: some number idk tbf
- * @index: alndl
  *
 * Description: Show a message blablabla
 * Return: Always 0 (Success)
@@ -12,12 +11,13 @@
 
 listint_t *reverse_listint(listint_t **head)
 {
-	listint_t *loc1, *loc2;
+	listint_t *loc1, *loc2 = NULL;
 
 	if (!head)
 		return (NULL);
 	loc1 = *head;
-	loc2 = siguiente(*head);
+	if (*head)
+		loc2 = siguiente(*head);
 	*head = NULL;
 
 	while (es_localizador_cadena(loc2))
