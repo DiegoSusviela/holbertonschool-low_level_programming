@@ -10,12 +10,9 @@
 
 unsigned int flip_bits(unsigned long int n, unsigned long int m)
 {
-	unsigned long int difference, checker;
-	unsigned int to_flip, iter;
+	unsigned long int difference =  n ^ m, checker = 1;
+	unsigned int to_flip = 0, iter;
 
-	to_flip = 0;
-	checker = 1;
-	difference = n ^ m;
 	for (iter = 0; iter < (sizeof(unsigned long int) * 8); iter++)
 	{
 		if ((checker & difference) == checker)
