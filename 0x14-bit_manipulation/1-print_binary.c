@@ -16,7 +16,7 @@ void print_binary(unsigned long int n)
 		_putchar('0');
 		return;
 	}
-	for (acom = (2^6) - 1; acom > -1; acom--)
+	for (acom = 63; acom >=  0; acom--)
 	{
 		aux = n >> acom;
 		if (aux & 1)
