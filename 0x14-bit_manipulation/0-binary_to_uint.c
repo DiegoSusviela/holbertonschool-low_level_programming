@@ -22,6 +22,6 @@ unsigned int binary_to_uint(const char *b)
 		if (b[pos] == '1')
 			num += 1;
 		pos++;
-		pos++;
 	}
+	return (num);
 }
