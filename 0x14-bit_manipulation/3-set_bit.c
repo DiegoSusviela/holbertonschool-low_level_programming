@@ -1,7 +1,7 @@
 #include "holberton.h"
 
 /**
- * get_bit - omaiga
+ * set_bit - omaiga
  * @n: wopa
  * @index: ondex
  *
