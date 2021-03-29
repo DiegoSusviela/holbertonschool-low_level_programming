@@ -1,5 +1,43 @@
 #include "holberton.h"
 
+
+void check_arguments(int argc)
+{
+	if (argc != 3)
+	{
+		dprintf(STDERR_FILENO, "Usage: cp file_from file_to\n");
+		exit(97);
+	}
+}
+
+void check_read(int fd1, char **argv, int flag)
+{
+	if (fd1 == -1)
+	{
+		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", argv[flag]);
+		if (flag == 1)
+			exit(98);
+		exit(99);
+	}
+}
+
+void check_write(int cant_escrito, int cant_leido, char **argv, int flag)
+{
+	if (cant_escrito != cant_leido)
+	{
+		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[flag]);
+		exit(99);
+	}
+}
+
+void check_close(int cerrar, int fd)
+{
+	if (cerrar == -1)
+	{
+		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", fd);
+		exit(100);
+	}
+}
 /**
  * main - omaiga
  * @argc: wopa
@@ -10,60 +48,31 @@
 
 int main(int argc, char **argv)
 {
-	int cant_leido, cant_escrito;
-	int file_desc_1, file_desc_2;
+	int cant_leido, cant_escrito, fd1, fd2;
 	int cerrar1, cerrar2;
 	char buffer[BUFSIZ];
 
-	if (argc != 3)
-	{
-		dprintf(STDERR_FILENO, "Usage: cp file_from file_to\n");
-		exit(97);
-	}
-	file_desc_1 = open(argv[1], O_RDONLY);
+	check_arguments(argc);
 
-	if (file_desc_1 == -1)
-	{
-		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", argv[1]);
-		exit(98);
-	}
-	file_desc_2 = open(argv[2], O_WRONLY | O_CREAT | O_TRUNC, 0664);
+	fd1 = open(argv[1], O_RDONLY);
+	check_read(fd1, argv, 1);
 
-	if (file_desc_2 == -1)
-	{
-		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[2]);
-		exit(99);
-	}
+	fd2 = open(argv[2], O_WRONLY | O_CREAT | O_TRUNC, 0664);	
+	check_read(fd2, argv, 2);
 
-	while ((cant_leido = read(file_desc_1, buffer, BUFSIZ)) > 0)
+	while ((cant_leido = read(fd1, buffer, BUFSIZ)) > 0)
 	{
-		cant_escrito = (write(file_desc_2, buffer, cant_leido));
-		if (cant_escrito != cant_leido)
-		{
-			dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[2]);
-			exit(99);
-		}
+		cant_escrito = (write(fd2, buffer, cant_leido));
+		check_write(cant_escrito, cant_leido, argv, 2);
 	}
+	check_read(cant_leido, argv, 1);
 
-	if (cant_leido == -1)
-	{
-		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", argv[1]);
-		exit(98);
-	}
-	cerrar1 = close(file_desc_1);
+	cerrar1 = close(fd1);
 
-	if (cerrar1 == -1)
-	{
-		dprintf(STDERR_FILENO, "Error: Can't close file_desc_1 %d\n", file_desc_1);
-		exit(100);
-	}
-	cerrar2 = close(file_desc_2);
+	check_close(cerrar1, fd1);
+	cerrar2 = close(fd2);
 
-	if (cerrar2 == -1)
-	{
-		dprintf(STDERR_FILENO, "Error: Can't close file_desc_1 %d\n", file_desc_2);
-		exit(100);
-	}
+	check_close(cerrar2, fd2);
 
 	return (0);
 }
