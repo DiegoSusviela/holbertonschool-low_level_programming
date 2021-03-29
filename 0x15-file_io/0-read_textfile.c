@@ -18,7 +18,7 @@ ssize_t read_textfile(const char *filename, size_t letters)
 
 	if (!filename)
 		return (0);
-	
+
 	file_dir = open(filename, O_RDONLY);
 	if (file_dir == -1)
 		return (0);
