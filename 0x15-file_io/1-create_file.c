@@ -19,7 +19,7 @@ size_t _strlen(char *str)
 /**
  * create_file - omaiga
  * @filename: wopa
- * @letters: dsfdsf
+ * @text_content: dsfdsf
  *
  * Return: the returnas
  */
