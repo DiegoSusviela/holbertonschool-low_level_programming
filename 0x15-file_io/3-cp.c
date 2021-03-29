@@ -91,7 +91,7 @@ int main(int argc, char **argv)
 	fd1 = open(argv[1], O_RDONLY);
 	check_read(fd1, argv, 1);
 
-	fd2 = open(argv[2], O_WRONLY | O_CREAT | O_TRUNC, 0664);	
+	fd2 = open(argv[2], O_WRONLY | O_CREAT | O_TRUNC, 0664);
 	if (fd2 == -1)
 		check_write(1, 1, argv, 2);
 
