@@ -10,9 +10,9 @@ void check_arguments(int argc)
 	}
 }
 
-void check_read(int fd1, char **argv, int flag)
+void check_read(int fd, char **argv, int flag)
 {
-	if (fd1 == -1)
+	if (fd == -1)
 	{
 		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", argv[flag]);
 		if (flag == 1)
@@ -58,7 +58,8 @@ int main(int argc, char **argv)
 	check_read(fd1, argv, 1);
 
 	fd2 = open(argv[2], O_WRONLY | O_CREAT | O_TRUNC, 0664);	
-	check_read(fd2, argv, 2);
+	if (fd2 == -1)
+		check_write(1, 1, argv, 2);
 
 	while ((cant_leido = read(fd1, buffer, BUFSIZ)) > 0)
 	{
