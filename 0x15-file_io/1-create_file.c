@@ -9,7 +9,7 @@
 
 size_t _strlen(char *str)
 {
-	size_t pos;
+	size_t pos = 0;
 
 	while (str[pos])
 		pos++;
