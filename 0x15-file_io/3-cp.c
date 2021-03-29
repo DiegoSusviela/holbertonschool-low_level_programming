@@ -1,5 +1,11 @@
 #include "holberton.h"
 
+/**
+ * check_arguments - omaiga
+ * @argc: wopa
+ *
+ * Return: the returnas
+ */
 
 void check_arguments(int argc)
 {
@@ -9,6 +15,15 @@ void check_arguments(int argc)
 		exit(97);
 	}
 }
+
+/**
+ * check_read - omaiga
+ * @fd: wopa
+ * @argv: dsfdsf
+ * @flag: adns
+ *
+ * Return: the returnas
+ */
 
 void check_read(int fd, char **argv, int flag)
 {
@@ -21,6 +36,16 @@ void check_read(int fd, char **argv, int flag)
 	}
 }
 
+/**
+ * check_write - omaiga
+ * @cant_escrito: wopa
+ * @argv: dsfdsf
+ * @cant_leido:  dnaold
+ * @flag: akldjnlkad
+ *
+ * Return: the returnas
+ */
+
 void check_write(int cant_escrito, int cant_leido, char **argv, int flag)
 {
 	if (cant_escrito != cant_leido)
@@ -30,6 +55,14 @@ void check_write(int cant_escrito, int cant_leido, char **argv, int flag)
 	}
 }
 
+/**
+ * check_close - omaiga
+ * @cerrar: wopa
+ * @fd: dsfdsf
+ *
+ * Return: the returnas
+ */
+
 void check_close(int cerrar, int fd)
 {
 	if (cerrar == -1)
@@ -38,6 +71,7 @@ void check_close(int cerrar, int fd)
 		exit(100);
 	}
 }
+
 /**
  * main - omaiga
  * @argc: wopa
