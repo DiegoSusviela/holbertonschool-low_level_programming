@@ -147,6 +147,14 @@ void print_t(unsigned int e_type, unsigned char *e_i)
 }
 
 
+unsigned int big_endian(unsigned int x)
+{
+	return (((x >> 24) & 0x000000ff) |
+		((x >> 8) & 0x0000ff00)  |
+		((x << 8) & 0x00ff0000)  |
+		((x << 24) & 0xff000000));
+}
+
 void print_e(unsigned int e_entry, unsigned char *e_i)
 {
 	if (e_i[EI_DATA] == ELFDATA2MSB)
@@ -155,14 +163,6 @@ void print_e(unsigned int e_entry, unsigned char *e_i)
 	printf("  Entry point address:               %#x\n", (unsigned int)e_entry);
 }
 
-
-unsigned int big_endian(unsigned int x)
-{
-	return (((x >> 24) & 0x000000ff) |
-		((x >> 8) & 0x0000ff00)  |
-		((x << 8) & 0x00ff0000)  |
-		((x << 24) & 0xff000000));
-}
 
 void print_elf(unsigned char *e_i)
 {
