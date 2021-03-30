@@ -71,10 +71,10 @@ void p_data(unsigned char *e_i)
 void p_ver(unsigned char *e_i)
 {
 	printf("  Version:                           ");
-	if (e_ident[EI_VERSION] == EV_CURRENT)
+	if (e_i[EI_VERSION] == EV_CURRENT)
 		printf("%i (current)\n", EV_CURRENT);
 	else
-		printf("%i\n", e_ident[EI_VERSION]);
+		printf("%i\n", e_i[EI_VERSION]);
 }
 
 
@@ -158,7 +158,7 @@ unsigned int big_endian(unsigned int x)
 
 void print_e(unsigned int e_entry, unsigned char *e_i)
 {
-	if (e_ident[EI_DATA] == ELFDATA2MSB)
+	if (e_i[EI_DATA] == ELFDATA2MSB)
 		e_entry = big_endian(e_entry);
 
 	printf("  Entry point address:               ");
