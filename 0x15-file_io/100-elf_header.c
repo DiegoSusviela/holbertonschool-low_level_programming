@@ -211,10 +211,10 @@ int main(int argc, char *argv[])
 		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", argv[1]);
 		exit(98);
 	}
-	is_elf(header->e_i);
-	print_elf(header->e_i);
-	printf("  ABI Version:                       %i\n", header->e_i[EI_ABIVERSION]);
-	print_t_e(header->e_type, header->e_entry, header->e_i);
+	is_elf(header->e_ident);
+	print_elf(header->e_ident);
+	printf("  ABI Version:                       %i\n", header->e_ident[EI_ABIVERSION]);
+	print_t_e(header->e_type, header->e_entry, header->e_ident);
 	free(header);
 	if (close(fd))
 	{
