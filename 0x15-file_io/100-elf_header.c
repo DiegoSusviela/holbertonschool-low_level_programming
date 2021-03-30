@@ -1,4 +1,5 @@
 #include "holberton.h"
+#include <elf.h>
 
 /**
  * check_arguments - omaiga
