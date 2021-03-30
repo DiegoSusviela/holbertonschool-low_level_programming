@@ -174,13 +174,13 @@ void print_elf(unsigned char *e_i)
 	p_ver(e_i);
 	p_osabi(e_i);
 }
-/*
+
 void print_t_e(unsigned int e_type, unsigned int e_entry, unsigned char *e_i)
 {
 	print_t(e_type, e_i);
 	print_e(e_entry, e_i);
 }
-*/
+
 int main(int argc, char *argv[])
 {
 	register int fd, to_read, clo;
@@ -217,9 +217,7 @@ int main(int argc, char *argv[])
 	print_elf(header->e_ident);
 	printf("  ABI Version:                       ");
 	printf("%i\n", header->e_ident[EI_ABIVERSION]);
-	/*print_t_e(header->e_type, header->e_entry, header->e_ident);*/
-	print_t(header->e_type, header->e_ident);
-	print_e(header->e_entry, header->e_ident);
+	print_t_e(header->e_type, header->e_entry, header->e_ident);
 	free(header);
 	clo = close(fd);
 	if (clo)
