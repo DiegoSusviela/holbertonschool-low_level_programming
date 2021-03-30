@@ -150,13 +150,13 @@ void print_t(unsigned int e_type, unsigned char *e_i)
 void print_e(unsigned int e_entry, unsigned char *e_i)
 {
 	if (e_i[EI_DATA] == ELFDATA2MSB)
-		e_entry = lit_to_big_endian(e_entry);
+		e_entry = big_endian(e_entry);
 
 	printf("  Entry point address:               %#x\n", (unsigned int)e_entry);
 }
 
 
-unsigned int lit_to_big_endian(unsigned int x)
+unsigned int big_endian(unsigned int x)
 {
 	return (((x >> 24) & 0x000000ff) |
 		((x >> 8) & 0x0000ff00)  |
