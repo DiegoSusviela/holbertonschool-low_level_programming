@@ -14,7 +14,7 @@ void is_elf(unsigned char *e_i)
 		printf("ELF Header:\n");
 	else
 	{
-		dprintf(STDERR_FILENO, "Error: Not valid ELF\n"); 
+		dprintf(STDERR_FILENO, "Error: Not valid ELF\n");
 		exit(98);
 	}
 }
@@ -183,29 +183,25 @@ void print_t_e(unsigned int e_type, unsigned int e_entry, unsigned char *e_i)
 
 int main(int argc, char *argv[])
 {
-	register int fd, to_read, clo;
+	register int fd, to_read;
 	Elf64_Ehdr *header;
-
 	if (argc != 2)
 	{
 		dprintf(STDERR_FILENO, "Usage: cp file_from file_to\n");
 		exit(98);
 	}
-
 	header = malloc(sizeof(Elf64_Ehdr));
 	if (!header)
 	{
 		dprintf(STDERR_FILENO, "Malloc error\n");
 		exit(98);
 	}
-
 	fd = open(argv[1], O_RDONLY);
 	if (fd < 0)
 	{
 		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", argv[1]);
 		exit(98);
 	}
-
 	to_read = read(fd, header, sizeof(Elf64_Ehdr));
 	if (to_read < 0)
 	{
@@ -219,8 +215,7 @@ int main(int argc, char *argv[])
 	printf("%i\n", header->e_ident[EI_ABIVERSION]);
 	print_t_e(header->e_type, header->e_entry, header->e_ident);
 	free(header);
-	clo = close(fd);
-	if (clo)
+	if (close(fd))
 	{
 		dprintf(STDERR_FILENO, "Error: Can't close fd\n");
 		exit(98);
