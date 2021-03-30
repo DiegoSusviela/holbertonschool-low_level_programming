@@ -181,7 +181,7 @@ void print_t_e(unsigned int e_type, unsigned int e_entry, unsigned char *e_i)
 
 int main(int argc, char *argv[])
 {
-	register int fd, to_read;
+	register int fd, to_read, clo;
 	Elf64_Ehdr *header;
 
 	if (argc != 2)
@@ -216,7 +216,8 @@ int main(int argc, char *argv[])
 	printf("  ABI Version:                       %i\n", header->e_ident[EI_ABIVERSION]);
 	print_t_e(header->e_type, header->e_entry, header->e_ident);
 	free(header);
-	if (close(fd))
+	clo = close(fd);
+	if (clo)
 	{
 		dprintf(STDERR_FILENO, "Error: Can't close fd\n");
 		exit(98);
