@@ -22,12 +22,12 @@ void is_elf(unsigned char *e_i)
 
 void p_mag(unsigned char *e_i)
 {
-	register int pos;
+	register int i;
 
 	printf("  Magic:   ");
-	for (pos = 0; pos < EI_NIDENT; pos++)
-		printf("%02x ", e_i[pos]);
-	printf("\n");
+	for (i = 0; i < EI_NIDENT - 1; i++)
+		printf("%02x ", e_i[i]);
+	printf("%02x\n", e_i[i]);
 }
 
 void p_class(unsigned char *e_i)
@@ -70,10 +70,11 @@ void p_data(unsigned char *e_i)
 
 void p_ver(unsigned char *e_i)
 {
-	printf("  Version:                           %i", EV_CURRENT);
-	if (e_i[EI_VERSION] == EV_CURRENT)
-		printf(" (current)");
-	printf("\n");
+	printf("  Version:                           ");
+	if (e_ident[EI_VERSION] == EV_CURRENT)
+		printf("%i (current)\n", EV_CURRENT);
+	else
+		printf("%i\n", e_ident[EI_VERSION]);
 }
 
 
@@ -157,10 +158,11 @@ unsigned int big_endian(unsigned int x)
 
 void print_e(unsigned int e_entry, unsigned char *e_i)
 {
-	if (e_i[EI_DATA] == ELFDATA2MSB)
+	if (e_ident[EI_DATA] == ELFDATA2MSB)
 		e_entry = big_endian(e_entry);
 
-	printf("  Entry point address:               %#x\n", (unsigned int)e_entry);
+	printf("  Entry point address:               ");
+	printf("%#x\n", (unsigned int)e_entry);
 }
 
 
@@ -213,7 +215,8 @@ int main(int argc, char *argv[])
 	}
 	is_elf(header->e_ident);
 	print_elf(header->e_ident);
-	printf("  ABI Version:                       %i\n", header->e_ident[EI_ABIVERSION]);
+	printf("  ABI Version:                       ");
+	printf("%i\n", header->e_ident[EI_ABIVERSION]);
 	/*print_t_e(header->e_type, header->e_entry, header->e_ident);*/
 	print_t(header->e_type, header->e_ident);
 	print_e(header->e_entry, header->e_ident);
