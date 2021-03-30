@@ -2,8 +2,8 @@
 #include <elf.h>
 
 /**
- * check_arguments - omaiga
- * @argc: wopa
+ * is_elf - omaiga
+ * @e_i: wopa
  *
  * Return: the returnas
  */
@@ -19,6 +19,12 @@ void is_elf(unsigned char *e_i)
 	}
 }
 
+/**
+ * p_mag - omaiga
+ * @e_i: wopa
+ *
+ * Return: the returnas
+ */
 
 void p_mag(unsigned char *e_i)
 {
@@ -29,6 +35,13 @@ void p_mag(unsigned char *e_i)
 		printf("%02x ", e_i[i]);
 	printf("%02x\n", e_i[i]);
 }
+
+/**
+ * p_class - omaiga
+ * @e_i: wopa
+ *
+ * Return: the returnas
+ */
 
 void p_class(unsigned char *e_i)
 {
@@ -49,6 +62,13 @@ void p_class(unsigned char *e_i)
 	}
 }
 
+/**
+ * p_data - omaiga
+ * @e_i: wopa
+ *
+ * Return: the returnas
+ */
+
 void p_data(unsigned char *e_i)
 {
 	printf("  Data:                              ");
@@ -68,6 +88,13 @@ void p_data(unsigned char *e_i)
 	}
 }
 
+/**
+ * p_ver - omaiga
+ * @e_i: wopa
+ *
+ * Return: the returnas
+ */
+
 void p_ver(unsigned char *e_i)
 {
 	printf("  Version:                           ");
@@ -77,6 +104,13 @@ void p_ver(unsigned char *e_i)
 		printf("%i\n", e_i[EI_VERSION]);
 }
 
+
+/**
+ * p_osabi - omaiga
+ * @e_i: wopa
+ *
+ * Return: the returnas
+ */
 
 void p_osabi(unsigned char *e_i)
 {
@@ -118,6 +152,14 @@ void p_osabi(unsigned char *e_i)
 	}
 }
 
+/**
+ * print_t - omaiga
+ * @e_type: wopa
+ * @e_i: alkdsnald
+ *
+ * Return: the returnas
+ */
+
 
 void print_t(unsigned int e_type, unsigned char *e_i)
 {
@@ -147,6 +189,13 @@ void print_t(unsigned int e_type, unsigned char *e_i)
 	}
 }
 
+/**
+ * big_endian - omaiga
+ * @x: wopa
+ *
+ * Return: the returnas
+ */
+
 
 unsigned int big_endian(unsigned int x)
 {
@@ -156,6 +205,14 @@ unsigned int big_endian(unsigned int x)
 		((x << 24) & 0xff000000));
 }
 
+/**
+ * print_e - omaiga
+ * @e_entry: wopa
+ * @e_i: akldnak
+ *
+ * Return: the returnas
+ */
+
 void print_e(unsigned int e_entry, unsigned char *e_i)
 {
 	if (e_i[EI_DATA] == ELFDATA2MSB)
@@ -164,6 +221,13 @@ void print_e(unsigned int e_entry, unsigned char *e_i)
 	printf("  Entry point address:               ");
 	printf("%#x\n", (unsigned int)e_entry);
 }
+
+/**
+ * print_elf - omaiga
+ * @e_i: wopa
+ *
+ * Return: the returnas
+ */
 
 
 void print_elf(unsigned char *e_i)
@@ -175,16 +239,34 @@ void print_elf(unsigned char *e_i)
 	p_osabi(e_i);
 }
 
+/**
+ * print_t_e - omaiga
+ * @e_type: wopa
+ * @e_entry: akdnl
+ * @e_i: akjldbnak
+ *
+ * Return: the returnas
+ */
+
 void print_t_e(unsigned int e_type, unsigned int e_entry, unsigned char *e_i)
 {
 	print_t(e_type, e_i);
 	print_e(e_entry, e_i);
 }
 
+/**
+ * main - omaiga
+ * @argc: wopa
+ * @argv: akdnl
+ *
+ * Return: the returnas
+ */
+
 int main(int argc, char *argv[])
 {
 	register int fd, to_read;
 	Elf64_Ehdr *header;
+
 	if (argc != 2)
 	{
 		dprintf(STDERR_FILENO, "Usage: cp file_from file_to\n");
