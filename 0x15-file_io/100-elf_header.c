@@ -215,8 +215,8 @@ int main(int argc, char *argv[])
 	print_elf(header->e_ident);
 	printf("  ABI Version:                       %i\n", header->e_ident[EI_ABIVERSION]);
 	/*print_t_e(header->e_type, header->e_entry, header->e_ident);*/
-	print_type(header->e_type, header->e_ident);
-	print_entry(header->e_entry, header->e_ident);
+	print_t(header->e_type, header->e_ident);
+	print_e(header->e_entry, header->e_ident);
 	free(header);
 	clo = close(fd);
 	if (clo)
