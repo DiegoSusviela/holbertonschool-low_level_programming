@@ -10,6 +10,13 @@ dlistint_t *anterior(const dlistint_t *loc)
 	return (loc->prev);
 }
 
+const dlistint_t *es_loc_cad(const dlistint_t *loc)
+{
+	if (loc)
+		return (loc);
+	return (NULL);
+}
+
 void insertar_antes(dlistint_t *a_insertar, dlistint_t *lugar)
 {
 	a_insertar->next = lugar;
@@ -32,12 +39,6 @@ void imprimir_nodo(const dlistint_t *loc)
 	printf("%d\n", loc->n);
 }
 
-const dlistint_t *es_loc_cad(const dlistint_t *loc)
-{
-	if (loc)
-		return (loc);
-	return (NULL);
-}
 
 dlistint_t *crear_nodo(dlistint_t *nodo, const int n)
 {
