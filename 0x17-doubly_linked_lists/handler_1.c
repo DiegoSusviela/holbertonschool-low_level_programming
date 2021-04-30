@@ -1,11 +1,11 @@
 #include "lists.h"
 
-dlistint_t *siguiente(dlistint_t *loc)
+dlistint_t *siguiente(const dlistint_t *loc)
 {
 	return (loc->next);
 }
 
-dlistint_t *anterior(dlistint_t *loc)
+dlistint_t *anterior(const dlistint_t *loc)
 {
 	return (loc->prev);
 }
@@ -31,9 +31,9 @@ void imprimir_nodo(const dlistint_t *loc)
 	printf("%d\n", loc->n);
 }
 
-int es_loc_cad(const dlistint_t *loc)
+const dlistint_t *es_loc_cad(const dlistint_t *loc)
 {
 	if (loc)
-		return (1);
-	return (0);
+		return (loc);
+	return (NULL);
 }
