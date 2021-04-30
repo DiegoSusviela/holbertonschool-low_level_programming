@@ -26,12 +26,12 @@ void insertar_despues(dlistint_t *a_insertar, dlistint_t *lugar)
 	lugar->next = a_insertar;
 }
 
-void imprimir_nodo(dlistint_t *loc)
+void imprimir_nodo(const dlistint_t *loc)
 {
 	printf("%d\n", loc->n);
 }
 
-int es_loc_cad(dlistint_t *loc)
+int es_loc_cad(const dlistint_t *loc)
 {
 	if (loc)
 		return (1);
