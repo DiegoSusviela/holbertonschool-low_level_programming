@@ -37,6 +37,6 @@ dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 	if (!a_insertar)
 		return (NULL);
 
-	insertar_antes(a_insertar, aux);
+	insertar_despues(a_insertar, aux);
 	return (a_insertar);
 }
