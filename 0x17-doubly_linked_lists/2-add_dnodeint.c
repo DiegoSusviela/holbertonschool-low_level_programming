@@ -13,9 +13,7 @@ dlistint_t *add_dnodeint(dlistint_t **head, const int n)
 
 	if (!head)
 		return (NULL);
-
-	nuevo_nodo = crear_nodo(n);
-	if (!nuevo_nodo)
+	if (!crear_nodo(nuevo_nodo, n))
 		return (NULL);
 	if (es_loc_cad(*head))
 		insertar_antes(nuevo_nodo, *head);
