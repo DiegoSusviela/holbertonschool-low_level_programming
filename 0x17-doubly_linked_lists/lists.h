@@ -26,5 +26,8 @@ dlistint_t *add_dnodeint_end(dlistint_t **head, const int n);
 dlistint_t *crear_nodo(const int n);
 void insertar_antes(dlistint_t *a_insertar, dlistint_t *lugar);
 const dlistint_t *es_loc_cad(const dlistint_t *loc);
+dlistint_t *siguiente(const dlistint_t *loc);
+dlistint_t *anterior(const dlistint_t *loc);
+const dlistint_t *es_loc_cad(const dlistint_t *loc);
 
 #endif
