@@ -2,7 +2,7 @@
 #include "handler_1.c"
 
 /**
- * free_dlistint - imprime
+ * sum_dlistint - imprime
  * @head: some number idk tbf
  *
 * Description: Show a message blablabla
@@ -13,5 +13,5 @@ int sum_dlistint(dlistint_t *head)
 {
 	if (head)
 		return (sum_dlistint(siguiente(head)) + head->n);
-	return (0);	
+	return (0);
 }

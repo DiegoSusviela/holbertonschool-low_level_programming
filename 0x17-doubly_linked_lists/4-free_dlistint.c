@@ -7,7 +7,7 @@
  * Description: Show a message blablabla
  * Return: Always 0 (Success)
  */
- 
+
 void liberar_nodo(dlistint_t *a_liberar)
 {
 	free(a_liberar);

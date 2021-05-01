@@ -44,6 +44,7 @@ void imprimir_nodo(const dlistint_t *loc)
 dlistint_t *crear_nodo(const int n)
 {
 	dlistint_t *nodo = malloc(sizeof(dlistint_t));
+
 	if (!nodo)
 		return (NULL);
 	nodo->n = n;
