@@ -30,7 +30,8 @@ void insertar_despues(dlistint_t *a_insertar, dlistint_t *lugar)
 {
 	a_insertar->prev = lugar;
 	a_insertar->next = siguiente(lugar);
-	lugar->next->prev = a_insertar;
+	if (es_loc_cad(siguiente(lugar)))
+		lugar->next->prev = a_insertar;
 	lugar->next = a_insertar;
 }
 
