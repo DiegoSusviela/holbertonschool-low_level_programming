@@ -39,6 +39,8 @@ void insertar_despues(dlistint_t *a_insertar, dlistint_t *lugar);
 void imprimir_nodo(const dlistint_t *loc);
 dlistint_t *crear_nodo(const int n);
 
+void liberar_nodo(dlistint_t *a_liberar);
+
 
 
 
