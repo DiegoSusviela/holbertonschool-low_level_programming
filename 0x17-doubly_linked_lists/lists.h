@@ -21,4 +21,8 @@ typedef struct dlistint_s
 	struct dlistint_s *next;
 } dlistint_t;
 
+dlistint_t *crear_nodo(const int n);
+void insertar_antes(dlistint_t *a_insertar, dlistint_t *lugar);
+const dlistint_t *es_loc_cad(const dlistint_t *loc);
+
 #endif
