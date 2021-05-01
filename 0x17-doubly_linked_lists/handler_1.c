@@ -52,6 +52,7 @@ dlistint_t *crear_nodo(const int n)
 
 	return (nodo);
 }
+
 /*
 void insertar_inicio(dlistint_t *a_insertar, dlistint_t *head)
 {
