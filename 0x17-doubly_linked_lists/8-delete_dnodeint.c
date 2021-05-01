@@ -1,5 +1,4 @@
 #include "lists.h"
-#include "4-free_dlistint.c"
 
 /**
  * delete_dnodeint_at_index - imprime
