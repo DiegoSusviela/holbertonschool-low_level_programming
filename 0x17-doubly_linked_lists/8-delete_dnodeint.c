@@ -1,6 +1,19 @@
 #include "lists.h"
 
 /**
+ * liberar_nodo - Entry point
+ * @a_liberar: wopa
+ *
+ * Description: Show a message blablabla
+ * Return: Always 0 (Success)
+ */
+
+void liberar_nodo(dlistint_t *a_liberar)
+{
+	free(a_liberar);
+}
+
+/**
  * delete_dnodeint_at_index - imprime
  * @head: some number idk tbf
  * @index: alndl
