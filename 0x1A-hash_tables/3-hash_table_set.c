@@ -46,11 +46,11 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	hash_node_t *nodo, *aux;
 	unsigned long int pos;
 	char *new;
-	
+
 	if (!ht || !ht->array || !ht->size || key || strlen(key) || value)
 		return (0);
-	
-	pos = key_index((const unsigned char*)key, ht->size);
+
+	pos = key_index((const unsigned char *)key, ht->size);
 	aux = ht->array[pos];
 	while (aux)
 		if (!strcmp(aux->key, key))
