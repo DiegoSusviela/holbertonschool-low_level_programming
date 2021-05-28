@@ -53,6 +53,7 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	pos = key_index((const unsigned char *)key, ht->size);
 	aux = ht->array[pos];
 	while (aux)
+	{
 		if (!strcmp(aux->key, key))
 		{
 			new = strdup(value);
@@ -62,6 +63,8 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 			aux->value = new;
 			return (1);
 		}
+		aux = aux->next;
+	}	
 	nodo = new_node(key, value);
 	if (!nodo)
 		return (0);
