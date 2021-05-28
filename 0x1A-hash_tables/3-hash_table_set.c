@@ -21,7 +21,7 @@ hash_node_t *new_node(const char *key, const char *value)
 		free(nodo);
 		return (NULL);
 	}
-	nodo->value = strdup(key);
+	nodo->value = strdup(value);
 	nodo->next = NULL;
 	if (!nodo->value)
 	{
@@ -64,7 +64,7 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 		}
 	nodo = new_node(key, value);
 	if (!nodo)
-		return (NULL);
+		return (0);
 	nodo->next = ht->array[pos];
 	ht->array[pos] = nodo;
 	return (1);
