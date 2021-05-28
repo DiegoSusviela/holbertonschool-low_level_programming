@@ -16,10 +16,16 @@ hash_node_t *new_node(const char *key, const char *value)
 	if (!nodo)
 		return (NULL);
 	nodo->key = strdup(key);
+	if (!nodo->key)
+	{
+		free(nodo);
+		return (NULL);
+	}
 	nodo->value = strdup(key);
 	nodo->next = NULL;
-	if (!nodo->key || !nodo->value)
+	if (!nodo->value)
 	{
+		free(nodo->key);
 		free(nodo);
 		return (NULL);
 	}
