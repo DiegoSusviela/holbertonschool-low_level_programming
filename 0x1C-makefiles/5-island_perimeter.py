@@ -1,5 +1,7 @@
 #!/usr/bin/python3
+""" Class that contains the entry point of the command interpreter"""
 def island_perimeter(grid):
+    """ Class that contains the entry point of the command interpreter"""
     perimetro = 0
     for fila in range(0, len(grid)):
         for col in range(0, len(grid[fila])):
