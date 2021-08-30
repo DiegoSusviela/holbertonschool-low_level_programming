@@ -37,11 +37,11 @@ int binary_search(int *array, size_t size, int value)
 		if (value > array[(max + min) / 2])
 			min = ((max + min) / 2) + 1;
 		else
-			if (value < array[(max + min) / 2])
-				max = (max + min) / 2;
-			else
-				if (value == array[(max + min) / 2])
-					return ((max + min) / 2);
+		{
+			if (value == array[(max + min) / 2])
+				return ((max + min) / 2);
+			max = (max + min) / 2;
+		}					
 		imprimir(array + min, max + 1 - min);
 	}
 	return (-1);
