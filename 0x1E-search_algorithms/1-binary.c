@@ -35,7 +35,7 @@ int binary_search(int *array, size_t size, int value)
 	while (min < max)
 	{
 		if (value > array[(max + min) / 2])
-			min = (max + min) / 2;
+			min = ((max + min) / 2) + 1;
 		if (value < array[(max + min) / 2])
 			max = (max + min) / 2;
 		if (value == array[(max + min) / 2])
