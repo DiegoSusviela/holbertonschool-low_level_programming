@@ -1,5 +1,14 @@
 #include "search_algos.h"
 
+/**
+ * linear_search - awopa
+ * @array: first ele
+ * @size: elem
+ * @value: val
+ *
+ * Return: -1 pa
+ */
+
 void imprimir(int *array, size_t size)
 {
 	size_t pos = 0;

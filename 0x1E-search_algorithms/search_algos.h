@@ -9,6 +9,7 @@
 #include <fcntl.h>
 #include <string.h>
 #include <ctype.h>
+#include <math.h>
 
 /**
  * struct listint_s - singly linked list
