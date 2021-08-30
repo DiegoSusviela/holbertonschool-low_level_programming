@@ -7,10 +7,10 @@ void imprimir(int *array, size_t size)
 	printf("Searching in array:");
 	while (pos < size)
 	{
-		printf(" %d", array[pos++]);
+		printf(" %d", array[pos]);
 		if (pos != size - 1)
 			printf(",");
-		size--;
+		pos++;
 	}
 	printf("\n");
 }
