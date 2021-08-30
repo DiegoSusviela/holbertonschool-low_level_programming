@@ -40,7 +40,7 @@ int binary_search(int *array, size_t size, int value)
 		{
 			if (value == array[(max + min) / 2])
 				return ((max + min) / 2);
-			max = (max + min) / 2;
+			max = ((max + min) / 2) - 1;
 		}					
 		imprimir(array + min, max + 1 - min);
 	}
